@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><img src="images/sushiclub.jpg" alt=""></title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/sForm.js"></script>
+    <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+    <script src="js/tms-0.4.1.js"></script>
+  
+  <!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+
+<body>
+    <div class="grid_12">
+        <div class="hor_separator"></div>
+      </div>
+      <div class="grid_12">
+        <div class="car_wrap">
+          <h2>Best Choice</h2>
+          <a href="#" class="prev"></a><a href="#" class="next"></a>
+          <ul class="carousel1">
+            <li>
+              <div><img src="images/page1_img1.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div>
+            </li>
+            <li>
+              <div><img src="images/page1_img2.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div>
+            </li>
+            <li>
+              <div><img src="images/page1_img3.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div>
+            </li>
+            <li>
+              <div><img src="images/page1_img4.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div>
+            </li>
+            <li>
+              <div><img src="images/page1_img3.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+  <div class="main" id="menuContainer">
+
+  </div>
+  <script>
+    $(window).load(function () {
+    $('.slider')._TMS({
+        show: 0,
+        pauseOnHover: false,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true, //'.pagination',true,'<ul></ul>'
+        pagNums: false,
+        slideshow: 8000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+  $(window).load(function () {
+    $('.carousel1').carouFredSel({
+        auto: false,
+        prev: '.prev',
+        next: '.next',
+        width: 960,
+        items: {
+            visible: {
+                min: 1,
+                max: 4
+            },
+            height: 'auto',
+            width: 240,
+        },
+        responsive: false,
+        scroll: 1,
+        mousewheel: false,
+        swipe: {
+            onMouse: false,
+            onTouch: false
+        }
+    });
+});
+
+    async function menu() {
+      fetch("http://localhost:3003/getmenuSushi").then(response => response.json())
+        .then(commits => {
+          const menuContainer = document.getElementById('menuContainer');
+          for (let i = 0; i < commits.length; i++) {
+            var div = document.createElement("div");
+            var img = document.createElement("img");
+            var h2 = document.createElement("h2");
+            var p = document.createElement("p");
+            var h3 = document.createElement("h3");
+            img.src = "images/" + commits[i].img
+            h2.innerHTML = commits[i].name;
+            p.innerHTML = commits[i].information;
+            h3.innerHTML = commits[i].price;
+            menuContainer.appendChild(div);
+            div.appendChild(img);
+            div.appendChild(h2);
+            div.appendChild(p);
+            div.appendChild(h3);
+          }
+        });
+    }
+menu();
+
+      // console.log(res);
+
+
+  //   const response = fetch('http://localhost:3003/getmenu', {
+  //   method: 'GET', // *GET, POST, PUT, DELETE, etc.
+  //   mode: 'cors', // no-cors, *cors, same-origin
+  //   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  //   credentials: 'same-origin', // include, *same-origin, omit
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //     // 'Content-Type': 'application/x-www-form-urlencoded',
+  //   },
+  //    // manual, *follow, error
+  //    // no-referrer, *client
+  //    // body data type must match "Content-Type" header
+  // });
+    // console.log(JSON.stringify(response));
+  </script>
+</body>
+
+</html>

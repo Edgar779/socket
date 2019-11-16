@@ -1,115 +1,272 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Steak House</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+<title><img src="images/sushiclub.jpg" alt=""></title>
+<meta charset="utf-8">
+<link rel="icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/slider.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/sForm.js"></script>
+<script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+<script src="js/tms-0.4.1.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+$(window).load(function () {
+    $('.slider')._TMS({
+        show: 0,
+        pauseOnHover: false,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true, //'.pagination',true,'<ul></ul>'
+        pagNums: false,
+        slideshow: 8000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+$(window).load(function () {
+    $('.carousel1').carouFredSel({
+        auto: false,
+        prev: '.prev',
+        next: '.next',
+        width: 960,
+        items: {
+            visible: {
+                min: 1,
+                max: 4
+            },
+            height: 'auto',
+            width: 240,
+        },
+        responsive: false,
+        scroll: 1,
+        mousewheel: false,
+        swipe: {
+            onMouse: false,
+            onTouch: false
+        }
+    });
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
 </head>
-<body>
-<div id="container_wrapper_outter">
-  <div id="container_wrapper_inner">
-    <div id="container">
-      <div id="menu">
-        <ul>
-          <li><a href="#" class="current">Home</a></li>
-          <li><a href="#">Templates</a></li>
-          <li><a href="#" class="margin_r_330">About</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Flash</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div id="site_title">
-          <h1> <a href="#">Steak House <span>free website template</span></a> </h1>
+<body style="background-color: #5fa022;"> 
+<div class="main">
+  <header  style="background-color: #130B14">
+    <div class="container_12">
+      <div class="grid_12">
+        <h1><a href="index.html"><img style="z-index: 1; width: 27%; border-radius: 50%; position: absolute;" src="images/sushiclub.jpg" alt=""></a></h1>
+        <div class="menu_block">
+          <nav>
+            <ul class="sf-menu">
+              <li class="current"><a href="index.html" style="color: #4DE304; background-color: #130B14;">Home</a></li>
+              <li class="with_ul"><a href="about-us.html" style="color: #4DE304; background-color: #130B14;">About Us</a>
+                
+              </li>
+              <li><a href="menu.html" style="color: #4DE304; background-color: #130B14;">Menu</a></li>
+              <li><a href="portfolio.html" style="color: #4DE304; background-color: #130B14;">Portfolio</a></li>
+              <li><a href="news.html" style="color: #4DE304; background-color: #130B14;">News</a></li>
+              <li><a href="contacts.html" style="color: #4DE304; background-color: #130B14;">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="clear"></div>
         </div>
+        <div class="clear"></div>
       </div>
-      <!-- end of menu -->
-      <div id="banner">
-        <div id="banner_section">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-          <p>Cras auctor, arcu sit amet auctor luctus, lectus sem rhoncus felis, dignissim convallis nulla quam ac dolor. Duis sollicitudin libero et odio.</p>
-        </div>
-        <!-- banner section -->
-      </div>
-      <!-- end of banner -->
-      <div id="content_wrapper">
-        <div id="content">
-          <div id="main_column">
-            <div class="section_w590">
-              <h2>Special Delicious Steaks</h2>
-              <div class="section_w590_content">
-                <p>This Free CSS template is provided by TemplateMo. You may download, modify and apply this template for your websites. Credits go to <a href="#">photovaco.com</a> and <a href="#">pdphoto.org</a> for photos used in this layout.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam vitae ipsum vulputate varius vitae semper nunc. Quisque eget elit quis augue pharetra feugiat. Suspendisse turpis arcu, dignissim ac laoreet a, condimentum in massa.</p>
-                <div class="button_01 fr"><a href="#">More</a></div>
-              </div>
-            </div>
-            <div class="cleaner_h50"></div>
-            <div class="section_w590">
-              <h2>New Sweet Dishes</h2>
-              <div class="section_w590_content">
-                <p>Fusce porttitor venenatis posuere. Donec aliquam venenatis tortor, in rutrum odio aliquam at. Nam rhoncus leo at urna facilisis ac viverra quam accumsan. Nulla scelerisque laoreet tincidunt. </p>
-                <div class="cleaner_h20"></div>
-                <div class="popular_meal_box margin_r_60"> <a href="#"><img src="images/image_01.jpg" alt="" /></a>
-                  <h3>New Dish One</h3>
-                  <p>Duis convallis, enim in scelerisque faucibus, mi libero interdum dolor, nec vestibulum turpis justo eget nulla.</p>
-                  <div class="price">Price: $30</div>
-                  <a href="#">Order</a> </div>
-                <div class="popular_meal_box"> <a href="#"><img src="images/image_02.jpg" alt="" /></a>
-                  <h3>Special Dish Two</h3>
-                  <p>Mauris ac diam quis magna rutrum adipiscing sed eget odio. Donec in metus elit, sed interdum magna</p>
-                  <div class="price">Price: $30</div>
-                  <a href="#">Order</a> </div>
-              </div>
-            </div>
-          </div>
-          <!-- end of main column -->
-          <div id="side_column">
-            <div class="side_column_section">
-              <h4>Categories</h4>
-              <ul class="category_list">
-                <li><a href="#">Lorem ipsum dolor</a></li>
-                <li><a href="#">Donec velit mi</a></li>
-                <li><a href="#">Sed malesuada urna</a></li>
-                <li><a href="#">Ut aliquet eros</a></li>
-                <li><a href="#">Praesent leo nisi</a></li>
-                <li><a href="#">Vestibulum porta</a></li>
-                <li><a href="#">Donec elementum</a></li>
-              </ul>
-            </div>
-            <div class="side_column_section">
-              <h4>Our Address</h4>
-              <a href="#"><img src="images/map.jpg" alt="" /></a>
-              <p> 101, Lorem ipsum,<br />
-                Sit amet, Consectetur, 10250<br />
-                <br />
-                Tel: 000-100-1000<br />
-                Fax: 002-002-0022<br />
-                <br />
-                Email:<br />
-                <a href="#">info{at}yourcompany.com</a> </p>
-            </div>
-            <div class="side_column_bottom"></div>
-          </div>
-          <!-- end of side column -->
-          <div class="cleaner"></div>
-        </div>
-        <!-- end of content -->
-        <div class="cleaner"></div>
-        <div class="content_bottom"></div>
-      </div>
-      <!-- end of content wrapper -->
-      <div id="footer">
-        <ul class="footer_menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Templates</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Flash</a></li>
-          <li><a href="#">About</a></li>
-          <li class="last_menu"><a href="#">Contact</a></li>
-        </ul>
-        Copyright &copy; 2048 <a href="#">Your Company Name</a> | Designed by TemplateMo</div>
     </div>
-    <!-- end of container -->
+  </header>
+  
+<div class="container-fluid" style="padding: 0%;">
+    <!-- <h2>Carousel Example</h2> -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" style="height: 500px;">
+  
+        <div class="item active">
+          <img src="images/backgr.jpg" alt="Los Angeles" style="width:100%;">
+          <!-- <div class="carousel-caption"> -->
+            <!-- <h3>Los Angeles</h3> -->
+            <!-- <p>LA is always so much fun!</p> -->
+          <!-- </div> -->
+        </div>
+  
+        <div class="item">
+          <img src="images/backgr2.jpg" alt="Chicago" style="width:100%; background-size: cover;">
+          <!-- <div class="carousel-caption"> -->
+            <!-- <h3>Chicago</h3> -->
+            <!-- <p>Thank you, Chicago!</p> -->
+          <!-- </div> -->
+        </div>
+      
+        <div class="item">
+          <img src="images/backgr3.jpg" alt="New York" style="width:100%;">
+          <!-- <div class="carousel-caption"> -->
+            <!-- <h3>New York</h3> -->
+            <!-- <p>We love the Big Apple!</p> -->
+          <!-- </div> -->
+        </div>
+    
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="content page1">
+    <div class="container_12">
+      <div class="grid_7">
+        <h2 style="color: #5fa022;" >Բարի գալուստ Sushi Club</h2>
+        <div class="page1_block col1"> <img src="images/set.jpg" style="border-radius: 50%" alt="">
+          <div class="extra_wrapper">
+            <p><span class="col2"><a href="#"></a></span>Սիրված և պահանջված սեթերը կարող եք շարունակել վայելել 40-50% զեղչով </p>
+            Աշխատանքի ընթացքում ընդմիջումներն անհրաժեշտ են բոլորիս: Ընդմիջումներից ամենահաճելին լանչն է, որն օգնում է վերականգնել ուժերը և բարձրացնել տրամադրությունը <br>
+            <a href="#" class="btn" style="background-color: #5fa022;">տեսնել մենյուն</a> </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="grid_5">
+        <h2 style="color: #5fa022;">Կոնտակտներ</h2>
+        <ul class="list">
+          <li>098֊21֊21֊14</li>
+          <li>043֊21֊21֊15</li>
+          <li>010֊47֊43֊41</li>
+          <li>Առաքում 400 դրամ</a></li>
+          <li>7․000 դրամ և ավել պատվերի դեպքում առաքումը անվճար</li>
+          <!-- <li><a href="#">Assist with wedding scheme and design</a></li> -->
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div class="grid_12">
+        <div class="hor_separator"></div>
+      </div>
+      <div class="grid_12">
+        <div class="car_wrap">
+          <h2 style="color: #5fa022;">Լավագույն առաջարկ</h2>
+          <!-- <a href="#" class="prev"></a><a href="#" class="next"></a> -->
+          <ul class="carousel1">
+            <li>
+              <div><img src="images/page1_img1.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div>
+            </li>
+            <li>
+              <div><img src="images/page1_img2.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div>
+            </li>
+            <li>
+              <div><img src="images/page1_img3.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div>
+            </li>
+            <li>
+              <!-- <div><img src="images/page1_img4.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+              </div> -->
+            </li>
+            <li>
+              <div><img src="images/page1_img3.jpg" alt="">
+                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="price">45$</div>
+               
+                  <div class="input-group" style="width: 70%; margin-top: 10px;">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                            <span class="glyphicon glyphicon-minus"></span>
+                          </button>
+                      </span>
+                      <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                              <span class="glyphicon glyphicon-plus"></span>
+                          </button>
+                      </span>
+                  </div>
+                  <a href="#" class="btn btn-info btn-lg" style="background-color: #5fa022; padding: 5%;">
+                      <span class="glyphicon glyphicon-shopping-cart"></span> Ավելացնել զամբյուղ
+                    </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="bottom_block">
+        <div class="grid_6">
+          <h3>Հետևեք մեզ</h3>
+          <div class="socials"> <a href="https://www.facebook.com/21sushiclub/"></a></div>
+          
+          <nav>
+            <ul>
+              <li class="current"><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid_6">
+          <h3>Էլեկտրոնային հասցե</h3>
+          <p class="col1">Ստացիր նորություններ, կատարիր
+              գործարքներ և առաջինը իմանացիր իրադարձությունների մասին<br>
+            </p>
+          <form id="newsletter" action="#">
+            <div class="success">Your subscribe request has been sent!</div>
+            <label class="email">
+              <input type="email" value="Enter e-mail address" >
+              <a href="#" class="btn" data-type="submit" style="background-color: #5fa022;">Հետևել</a> <span class="error">*This is not a valid email address.</span> </label>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
   </div>
 </div>
+<footer>
+  <div class="container_12">
+    <div class="grid_12"> Sushi Club &copy; 2019 | <a href="#">Privacy Policy</a> </div>
+    <div class="clear"></div>
+  </div>
+</footer>
 </body>
 </html>
