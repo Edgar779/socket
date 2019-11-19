@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const menuSchema = mongoose.Schema({
+const setSchema = mongoose.Schema({
     img: String,
     name:String,
     information:String,
     lot: String,
-    price:Number,
+    price:String,
 });
-module.exports = mongoose.model('Menu',menuSchema);
+module.exports = mongoose.model('Set',setSchema);

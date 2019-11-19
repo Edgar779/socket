@@ -579,7 +579,9 @@ margin-top: 13px;
  -o-box-sizing: border-box;
  box-sizing: border-box;
 }
-
+.sushi-information{
+	color: white;
+}
 #newsletter a.btn {
 	float: right;
 	text-transform: capitalize;

@@ -18,47 +18,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script>
-$(window).load(function () {
-    $('.slider')._TMS({
-        show: 0,
-        pauseOnHover: false,
-        prevBu: '.prev',
-        nextBu: '.next',
-        playBu: false,
-        duration: 800,
-        preset: 'fade',
-        pagination: true, //'.pagination',true,'<ul></ul>'
-        pagNums: false,
-        slideshow: 8000,
-        numStatus: false,
-        banners: false,
-        waitBannerAnimation: false,
-        progressBar: false
-    })
-});
-$(window).load(function () {
-    $('.carousel1').carouFredSel({
-        auto: false,
-        prev: '.prev',
-        next: '.next',
-        width: 960,
-        items: {
-            visible: {
-                min: 1,
-                max: 4
-            },
-            height: 'auto',
-            width: 240,
-        },
-        responsive: false,
-        scroll: 1,
-        mousewheel: false,
-        swipe: {
-            onMouse: false,
-            onTouch: false
-        }
-    });
-});
+
 </script>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
@@ -141,14 +101,14 @@ $(window).load(function () {
       </a>
     </div>
   </div>
-  <div class="content page1">
+  <div class="content page1" style="background-color: #130B14">
     <div class="container_12">
       <div class="grid_7">
         <h2 style="color: #5fa022;" >Բարի գալուստ Sushi Club</h2>
         <div class="page1_block col1"> <img src="images/set.jpg" style="border-radius: 50%" alt="">
           <div class="extra_wrapper">
-            <p><span class="col2"><a href="#"></a></span>Սիրված և պահանջված սեթերը կարող եք շարունակել վայելել 40-50% զեղչով </p>
-            Աշխատանքի ընթացքում ընդմիջումներն անհրաժեշտ են բոլորիս: Ընդմիջումներից ամենահաճելին լանչն է, որն օգնում է վերականգնել ուժերը և բարձրացնել տրամադրությունը <br>
+            <p style="color: white"><span class="col2"><a href="#"></a></span>Սիրված և պահանջված սեթերը կարող եք շարունակել վայելել 40-50% զեղչով </p>
+            <span style="color: white">Աշխատանքի ընթացքում ընդմիջումներն անհրաժեշտ են բոլորիս: Ընդմիջումներից ամենահաճելին լանչն է, որն օգնում է վերականգնել ուժերը և բարձրացնել տրամադրությունը</span> <br>
             <a href="#" class="btn" style="background-color: #5fa022;">տեսնել մենյուն</a> </div>
           <div class="clear"></div>
         </div>
@@ -156,11 +116,11 @@ $(window).load(function () {
       <div class="grid_5">
         <h2 style="color: #5fa022;">Կոնտակտներ</h2>
         <ul class="list">
-          <li>098֊21֊21֊14</li>
-          <li>043֊21֊21֊15</li>
-          <li>010֊47֊43֊41</li>
-          <li>Առաքում 400 դրամ</a></li>
-          <li>7․000 դրամ և ավել պատվերի դեպքում առաքումը անվճար</li>
+          <li style="color: white">098֊21֊21֊14</li>
+          <li style="color: white">043֊21֊21֊15</li>
+          <li style="color: white">21sushiclub@mail.ru</li>
+          <li style="color: white">Առաքումը անվճար</a></li>
+          <!-- <li style="color: white">7․000 դրամ և ավել պատվերի դեպքում առաքումը անվճար</li> -->
           <!-- <li><a href="#">Assist with wedding scheme and design</a></li> -->
         </ul>
       </div>
@@ -175,23 +135,74 @@ $(window).load(function () {
           <ul class="carousel1">
             <li>
               <div><img src="images/page1_img1.jpg" alt="">
-                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
-                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="col1 upp"> <p class="sushi-information">Lorem ipsum doamet consectet</p></div>
+                <span class="sushi-information"> Dorem ipsum dolor amet consectetur</span>
                 <div class="price">45$</div>
+               
+                  <div class="input-group" style="width: 70%; margin-top: 10px;">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                            <span class="glyphicon glyphicon-minus"></span>
+                          </button>
+                      </span>
+                      <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                              <span class="glyphicon glyphicon-plus"></span>
+                          </button>
+                      </span>
+                  </div>
+                  <a href="#" class="btn btn-info btn-lg" style="background-color: #5fa022; padding: 5%;">
+                      <span class="glyphicon glyphicon-shopping-cart"></span> Ավելացնել զամբյուղ
+                    </a>
               </div>
             </li>
             <li>
               <div><img src="images/page1_img2.jpg" alt="">
-                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
-                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="col1 upp"> <p class="sushi-information">Lorem ipsum doamet consectet</p></div>
+                <span class="sushi-information"> Dorem ipsum dolor amet consectetur</span>
                 <div class="price">45$</div>
+               
+                  <div class="input-group" style="width: 70%; margin-top: 10px;">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                            <span class="glyphicon glyphicon-minus"></span>
+                          </button>
+                      </span>
+                      <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                              <span class="glyphicon glyphicon-plus"></span>
+                          </button>
+                      </span>
+                  </div>
+                  <a href="#" class="btn btn-info btn-lg" style="background-color: #5fa022; padding: 5%;">
+                      <span class="glyphicon glyphicon-shopping-cart"></span> Ավելացնել զամբյուղ
+                    </a>
               </div>
             </li>
             <li>
               <div><img src="images/page1_img3.jpg" alt="">
-                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
-                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="col1 upp"> <p class="sushi-information">Lorem ipsum doamet consectet</p></div>
+                <span class="sushi-information"> Dorem ipsum dolor amet consectetur</span>
                 <div class="price">45$</div>
+               
+                  <div class="input-group" style="width: 70%; margin-top: 10px;">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                            <span class="glyphicon glyphicon-minus"></span>
+                          </button>
+                      </span>
+                      <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                              <span class="glyphicon glyphicon-plus"></span>
+                          </button>
+                      </span>
+                  </div>
+                  <a href="#" class="btn btn-info btn-lg" style="background-color: #5fa022; padding: 5%;">
+                      <span class="glyphicon glyphicon-shopping-cart"></span> Ավելացնել զամբյուղ
+                    </a>
               </div>
             </li>
             <li>
@@ -203,8 +214,8 @@ $(window).load(function () {
             </li>
             <li>
               <div><img src="images/page1_img3.jpg" alt="">
-                <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
-                <span> Dorem ipsum dolor amet consectetur</span>
+                <div class="col1 upp"> <p class="sushi-information">Lorem ipsum doamet consectet</p></div>
+                <span class="sushi-information"> Dorem ipsum dolor amet consectetur</span>
                 <div class="price">45$</div>
                
                   <div class="input-group" style="width: 70%; margin-top: 10px;">
@@ -231,14 +242,14 @@ $(window).load(function () {
       <div class="clear"></div>
       <div class="bottom_block">
         <div class="grid_6">
-          <h3>Հետևեք մեզ</h3>
+          <h3 style="color: #5fa022">Հետևեք մեզ</h3>
           <div class="socials"> <a href="https://www.facebook.com/21sushiclub/"></a></div>
           
           <nav>
             <ul>
               <li class="current"><a href="index.html">Home</a></li>
               <li><a href="about-us.html">About Us</a></li>
-              <li><a href="menu.html">Menu</a></li>
+              <li><a href="http://localhost:3003/set">Menu</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="news.html">News</a></li>
               <li><a href="contacts.html">Contacts</a></li>
@@ -246,8 +257,8 @@ $(window).load(function () {
           </nav>
         </div>
         <div class="grid_6">
-          <h3>Էլեկտրոնային հասցե</h3>
-          <p class="col1">Ստացիր նորություններ, կատարիր
+          <h3 style="color: #5fa022">Էլեկտրոնային հասցե</h3>
+          <p class="col1" style="color: white">Ստացիր նորություններ, կատարիր
               գործարքներ և առաջինը իմանացիր իրադարձությունների մասին<br>
             </p>
           <form id="newsletter" action="#">
