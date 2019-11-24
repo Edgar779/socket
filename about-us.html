@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Gourmet Traditional Restaurant | About Us</title>
-<meta charset="utf-8">
-<link rel="icon" href="images/favicon.ico">
-<link rel="shortcut icon" href="images/favicon.ico">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
-<script src="js/superfish.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/sForm.js"></script>
-<script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
-<script>
-$(window).load(function () {
-    $('.carousel2').carouFredSel({
-        auto: false,
-        prev: '.prev1',
-        next: '.next1',
-        width: 410,
-        items: {
-            visible: {
-                min: 1,
-                max: 1
-            },
-            height: 'auto',
-            width: 410,
-        },
-        responsive: false,
-        scroll: 1,
-        mousewheel: false,
-        swipe: {
-            onMouse: false,
-            onTouch: false
-        }
-    });
-});
-</script>
-<!--[if lt IE 9]>
+  <title><img src="images/sushiclub.jpg" alt=""></title>
+  <style>
+  .menuImg{
+    height: 130px;
+  }
+  </style>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.1.1.js"></script>
+  <script src="js/superfish.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/sForm.js"></script>
+  <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+  <script src="js/tms-0.4.1.js"></script>
+
+  <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <link rel="stylesheet" media="screen" href="css/ie.css">
 <![endif]-->
 </head>
-<body>
-<div class="main">
-  <header>
+
+<body style="background-color: #5fa022;">
+  <header style="background-color: #130B14">
     <div class="container_12">
       <div class="grid_12">
-        <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+        <h1><a href="index.html"><img style="z-index: 1; width: 27%; border-radius: 50%; position: absolute;"
+              src="images/sushiclub.jpg" alt=""></a></h1>
+
         <div class="menu_block">
           <nav>
             <ul class="sf-menu">
-              <li><a href="index.html">Home</a></li>
-              <li class="current"><a href="about-us.html">About Us</a>
-                <ul>
-                  <li><a href="#"> cuisine</a></li>
-                  <li><a href="#">Good rest</a></li>
-                  <li><a href="#">Services</a></li>
-                </ul>
+              <li><a href="index.html" style="color: #4DE304; background-color: #130B14;">Home</a></li>
+              <li><a href="about-us.html" style="color: #4DE304; background-color: #130B14;">Basket</a>
+                
               </li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="contacts.html">Contacts</a></li>
+              <li><a href="menu.html" style="color: #4DE304; background-color: #130B14;">Menu</a></li>
+              <!-- <li><a href="portfolio.html" style="color: #4DE304; background-color: #130B14;">Portfolio</a></li> -->
+              <li id="price"></li>
+              <!-- <li class="current"><a href="contacts.html" -->
+                  <!-- style="color: #4DE304; background-color: #130B14;">Contacts</a></li> -->
             </ul>
           </nav>
           <div class="clear"></div>
@@ -71,101 +59,901 @@ $(window).load(function () {
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content" style="background-color: #130B14;">
+   
     <div class="container_12">
-      <div class="grid_5">
-        <h2>About Us</h2>
-        <img src="images/page2_img1.jpg" alt="" class="img_inner">
-        <p class="col1">Curabitur in turpisju massa. Donec et nibh non turpis pellentesque suscipit eget. </p>
-        <p>Ghfgop Maecnas cursus fringilla sagittis. Donec eu felis purus, iaculis fringilla ipsum. Inte ger non nulla sem, eget volutpat augue. Curabitur in turpisju massa. Donec et nibh non turpis pellentesque suscipit eget. </p>
-        Donec eu felis purus, iaculis fringilla ipsum. Integer non. nulla sem, eget volutpat augue. Curabitur in turpisju massa. Donec et nibh non turpis pellentesque suscipit eget vel odio. Sed tempus orci tempus libero suscipit elementum. Aliquam consectetur. Ghfgop Maecnas cursus. <br>
-        <a href="#" class="btn m1">More</a> </div>
-      <div class="grid_5 prefix_2">
-        <h2>Testimonials</h2>
-        <ul class="carousel2">
-          <li>
-            <blockquote> <img src="images/page2_img2.png" alt="">
-              <div class="extra_wrapper">
-                <div class="title">Sara &amp; Kevin <br>
-                  Jonson</div>
-              </div>
-              <div class="clear"></div>
-              <p class="col1"><a href="#">Euismod pellentesque in dui. Semper, enim eget eleifend faucibus, sem libero gravida erat, sit amet viverra dui nisl non nulla. Pellentesque in dui euismod. </a></p>
-              <p>Curabitur felis purus, iaculis fringi. ipsum. Integer non nulla sem, eget volutpat augue. Ghfgop Maecnas cursus fringilla sagittis. Donec eu felis purus, iaculis fringilla ipsum. Inte ger non nulla sem, eget volutpat augue. Curabitur in turpisju massa. Donec et nibh non turpis pellentesque suscipit eget vel odio.  Aliquam consectetur. Fringilla ipsum. </p>
-              <p>Ringilla ipsum. Donec et nibh non turpis pellentesque suscipit eget vel odio. Sed tempus orci tempus libero suscipit elementum. Aliquam consectetur. Ghfgop Maecnas cursus fringilla sagittis. Donec eu felis purus, iaculis fringi. ipsum. Integer non nulla sem, eget volutpat augue. Ghfgop pelle ntesque suscipit eget consectetur.</p>
-            </blockquote>
-          </li>
-          <li>
-            <blockquote> <img src="images/page2_img2-1.png" alt="">
-              <div class="extra_wrapper">
-                <div class="title">Moira &amp; Brett<br>
-                  Clark</div>
-              </div>
-              <div class="clear"></div>
-              <p class="col1">Pellentesque in dui euismod. Aliquam semper, enim eget eleifend faucibus, sem libero gravida erat, sit amet viverra dui nisl non nulla. Pellentesque in dui euismod nibh suscipi. </p>
-              <p>Donec eu felis purus, iaculis fringi. ipsum. Integer non nulla sem, eget volutpat augue. Ghfgop Maecnas cursus fringilla sagittis. Donec eu felis purus, iaculis fringilla ipsum. Inte ger non nulla sem, eget volutpat augue. Curabitur in turpisju massa. Donec et nibh non turpis pellentesque suscipit eget vel odio.  Aliquam consectetur. Ghfgop Maecnas cursus frin.</p>
-              <p>Curabitur in turpisju massa. Donec et nibh non turpis pellen tesque suscipit eget vel odio. Sed tempus orci tempus libero suscipit elementum. Aliquam consectetur. Ghfgop Maecnas cursus fringilla sagittis. Donec eu felis purus, iaculis fringi. ipsum. Integer non nulla sem, eget volutpat augue. Ghfgop Maecnas cursus fringilla sagittis.</p>
-            </blockquote>
-          </li>
-        </ul>
-        <a href="#" class="next1"></a> <a href="#" class="prev1"></a> </div>
-      <div class="clear"></div>
-      <div class="grid_12">
-        <div class="hor_separator hor1"></div>
-        <h2 class="head1">Our Best Chefs</h2>
-      </div>
-      <div class="clear"></div>
-      <div class="chefs">
-        <div class="grid_3"> <img src="images/page2_img3.jpg" alt="" class="img_inner">
-          <p class="col1"><a href="#">Ann Franklin</a></p>
-          Nulla pellentesque tempus quam nec porta. Donec nec lorem enim. Aenean velit velit, faucibus sed porta quis, gt er semper ac elit. Aliquam hendrerit mo lestie turpis condimentum tristique. Fty aliquam malesuada orci a massa yht. semper sed interdum arcu </div>
-        <div class="grid_3"> <img src="images/page2_img4.jpg" alt="" class="img_inner">
-          <p class="col1"><a href="#"> Milisa Dayemond</a></p>
-          Lorem ipsum pellentesque tempus quam nec porta. Donec nec lorem enim. Aenean velit velit, faucibus sed porta quis, gt er semper ac elit. Aliquam hendrerit mo lestie turpis condimentum tristique. Fty aliquam malesuada orci a massa iaculis. Integer a diam a odio. </div>
-        <div class="grid_3"> <img src="images/page2_img5.jpg" alt="" class="img_inner">
-          <p class="col1"><a href="#">Liza Croft</a></p>
-          Aenean velittempus quam nec porta. Donec nec lorem enim. Aenean velit velit, faucibus sed porta quis, gt er semper ac elit. Aliquam hendrerit mo lestie turpis condimentum tristique. Fty aliquam malesuada orci a massa yht. semper sed interdum. </div>
-        <div class="grid_3"> <img src="images/page2_img6.jpg" alt="" class="img_inner">
-          <p class="col1"><a href="#">Alan Soares</a></p>
-          Donec necllentesque tempus quam nec porta. Donec nec lorem enim. Aenean velit velit, faucibus sed porta quis, gt er semper ac elit. Aliquam hendrerit mo lestie turpis condimentum tristique. Fty aliquam malesuada orci a massa yht. semper sed interdum. </div>
+     
+      <div id="contain" style="width: 100%; margin-top: 50px;">
+        <div class="row">
+          <div class="col-md-12" id="setMenu">
+          </div>
+
+        </div>
+        
       </div>
       <div class="clear"></div>
       <div class="bottom_block">
         <div class="grid_6">
-          <h3>Follow Us</h3>
-          <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+          <h3 style="color: #4DE304;">Follow Us</h3>
+          <div class="socials"> <a href="https://www.facebook.com/21sushiclub/" target="_blank"></a> </div>
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li class="current"><a href="about-us.html">About Us</a></li>
+              <li><a href="about-us.html">Basket</a></li>
               <li><a href="menu.html">Menu</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="contacts.html">Contacts</a></li>
+              <!-- <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="news.html">News</a></li> -->
+              <li class="current"><a href="contacts.html">Contacts</a></li>
             </ul>
           </nav>
         </div>
         <div class="grid_6">
-          <h3>Email Updates</h3>
-          <p class="col1">Join our digital mailing list and get news<br>
-            deals and be first to know about events</p>
-          <form id="newsletter" action="#">
-            <div class="success">Your subscribe request has been sent!</div>
-            <label class="email">
-              <input type="email" value="Enter e-mail address" >
-              <a href="#" class="btn" data-type="submit">subscribe</a> <span class="error">*This is not a valid email address.</span> </label>
-          </form>
-        </div>
+            <h3 style="color: #5fa022">Էլեկտրոնային հասցե</h3>
+            <p class="col1" style="color: white">Ստացիր նորություններ, կատարիր
+                գործարքներ և առաջինը իմանացիր իրադարձությունների մասին<br>
+              </p>
+              <form id="newsletter" action="#">
+                  <div class="success">Your subscribe request has been sent!</div>
+                  <label class="email">
+                    <input type="email" value="Enter e-mail address" >
+                    <a href="https://www.facebook.com/21sushiclub/" target="_blank" class="btn" data-type="submit" style="background-color: #5fa022;">Հետևել</a> <span class="error">*This is not a valid email address.</span> </label>
+                </form>
+          </div>
       </div>
       <div class="clear"></div>
     </div>
   </div>
-</div>
-<footer>
-  <div class="container_12">
-    <div class="grid_12"> Gourmet Traditional Restaurant &copy; 2045 | <a href="#">Privacy Policy</a> | Design by: <a href="http://www.templatemonster.com/">TemplateMonster.com</a> </div>
-    <div class="clear"></div>
   </div>
-</footer>
+ 
+  <footer>
+    <div class="container_12">
+      <div class="grid_12"> Sushi Club &copy; 2019 | <a href="#">Privacy Policy</a>> </div>
+      <div class="clear"></div>
+    </div>
+    
+  </footer>
+
+
+  <script>
+(function(){
+
+    let obj = {};
+  const getInfo = JSON.parse(localStorage.getItem('Info'));
+  if(getInfo === null || getInfo == ''){
+getBasket();
+  }
+  for(let i = 0; i < getInfo.length; i++){
+    let value = getInfo[i].name;
+    let lot = getInfo[i].lot;
+
+    if(obj[value]){ 
+      obj[value].lot += parseInt(lot);
+    } else {
+    obj[value] = {
+      ...getInfo[i],
+      lot: parseInt(lot)
+    };
+    }
+    
+  }
+  const arr = Object.values(obj);
+  
+    fetch("http://localhost:3003/getBasket", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(arr)
+  }).then(response => response.json())
+  .then(commits =>{
+   
+const allprice = []; 
+    const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot;
+        const setuserp = document.createElement('p');
+        setuserp.style = 'color: white; margin-top: 20px';
+        setuserp.innerHTML = "ընտրված քանակ" + ' ' + commits[i].enteredlot;
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.style = 'padding: 1%';
+        divprice.innerHTML = commits[i].price * commits[i].enteredlot + ' ' + 'դրամ';
+        var resnewlot = commits[i].enteredlot;
+        const append = commits[i].price * commits[i].enteredlot;
+        allprice.push(append);
+        divprice.onclick = "addBasket(this)";
+       const abtn = document.createElement('a');
+       const span3 = document.createElement('span');
+        abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'padding: 5%';
+const span4 = document.createElement('span');
+span4.className = 'glyphicon glyphicon-minus';
+abtn.innerHTML = 'Ջնջել պատվերը';
+abtn.name = commits[i].name;
+abtn.addEventListener('click', ()=>{  
+  let newarr = [];
+  const getInfostore = JSON.parse(localStorage.getItem('Info'));
+  for(let i = 0; i < getInfostore.length; i++){
+    
+if(getInfostore[i].name !== abtn.name){
+    newarr.push(getInfostore[i]);
+}
+    
+  }
+    localStorage.setItem('Info', JSON.stringify(newarr));
+location.reload();
+});
+ 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(setuserp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span4);
+       
+
+      
+
+}
+const resarr = allprice.map(function(item) {
+    return parseInt(item, 10);
+});
+const resp = resarr.reduce((a, b) => a + b);
+
+const pricelot = document.getElementById('price');
+       const pricelotinformation = document.createElement('a');
+       pricelotinformation.style = 'background-color: #130B14';
+pricelotinformation.innerHTML = 'Ընդհանուր արժեք - ' + resp + ' ' + 'դրամ';
+       pricelot.appendChild(pricelotinformation);
+       getBasket();
+  }).catch(e =>{
+// console.log(e);
+  })
+  
+})()
+function getBasket(){
+     
+  
+  let obj = {};
+  const getInfo = JSON.parse(localStorage.getItem('Sushi'));
+  if(getInfo === null || getInfo == ''){
+getBasketRoll();
+  }
+  for(let i = 0; i < getInfo.length; i++){
+    let value = getInfo[i].name;
+    let lot = getInfo[i].lot;
+
+    if(obj[value]){ 
+      obj[value].lot += parseInt(lot);
+    } else {
+    obj[value] = {
+      ...getInfo[i],
+      lot: parseInt(lot)
+    };
+    }
+    
+  }
+  const arr = Object.values(obj);
+  
+    fetch("http://localhost:3003/getSushiBasket  ", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(arr)
+  }).then(response => response.json())
+  .then(commits =>{
+   
+const allprice = []; 
+    const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot;
+        const setuserp = document.createElement('p');
+        setuserp.style = 'color: white; margin-top: 20px';
+        setuserp.innerHTML = "ընտրված քանակ" + ' ' + commits[i].enteredlot;
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.style = 'padding: 1%';
+        divprice.innerHTML = commits[i].price * commits[i].enteredlot + ' ' + 'դրամ';
+        var resnewlot = commits[i].enteredlot;
+        const append = commits[i].price * commits[i].enteredlot;
+        allprice.push(append);
+        divprice.onclick = "addBasket(this)";
+       const abtn = document.createElement('a');
+       const span3 = document.createElement('span');
+        abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'padding: 5%';
+const span4 = document.createElement('span');
+span4.className = 'glyphicon glyphicon-minus';
+abtn.innerHTML = 'Ջնջել պատվերը';
+abtn.name = commits[i].name;
+abtn.addEventListener('click', ()=>{  
+  let newarr = [];
+  const getInfostore = JSON.parse(localStorage.getItem('Sushi'));
+  for(let i = 0; i < getInfostore.length; i++){
+    
+if(getInfostore[i].name !== abtn.name){
+    newarr.push(getInfostore[i]);
+}
+    
+  }
+    localStorage.setItem('Sushi', JSON.stringify(newarr));
+location.reload();
+});
+ 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(setuserp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span4);
+       
+
+      
+
+}
+const resarr = allprice.map(function(item) {
+    return parseInt(item, 10);
+});
+const resp = resarr.reduce((a, b) => a + b);
+
+const pricelot = document.getElementById('price');
+       const pricelotinformation = document.createElement('a');
+       pricelotinformation.style = 'background-color: #130B14';
+pricelotinformation.innerHTML = 'Ընդհանուր արժեք - ' + resp + ' ' + 'դրամ';
+       pricelot.appendChild(pricelotinformation);
+       getBasketRoll();
+  }).catch(e =>{
+console.log(e);
+  })
+
+}
+function getBasketRoll(){
+  
+  let obj = {};
+  const getInfo = JSON.parse(localStorage.getItem('Roll'));
+  if(getInfo === null || getInfo == ''){
+getBasketSashimi();
+  }
+  for(let i = 0; i < getInfo.length; i++){
+    let value = getInfo[i].name;
+    let lot = getInfo[i].lot;
+
+    if(obj[value]){ 
+      obj[value].lot += parseInt(lot);
+    } else {
+    obj[value] = {
+      ...getInfo[i],
+      lot: parseInt(lot)
+    };
+    }
+    
+  }
+  const arr = Object.values(obj);
+  
+    fetch("http://localhost:3003/getRollBasket  ", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(arr)
+  }).then(response => response.json())
+  .then(commits =>{
+   
+const allprice = []; 
+    const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot;
+        const setuserp = document.createElement('p');
+        setuserp.style = 'color: white; margin-top: 20px';
+        setuserp.innerHTML = "ընտրված քանակ" + ' ' + commits[i].enteredlot;
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.style = 'padding: 1%';
+        divprice.innerHTML = commits[i].price * commits[i].enteredlot + ' ' + 'դրամ';
+        var resnewlot = commits[i].enteredlot;
+        const append = commits[i].price * commits[i].enteredlot;
+        allprice.push(append);
+        divprice.onclick = "addBasket(this)";
+       const abtn = document.createElement('a');
+       const span3 = document.createElement('span');
+        abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'padding: 5%';
+const span4 = document.createElement('span');
+span4.className = 'glyphicon glyphicon-minus';
+abtn.innerHTML = 'Ջնջել պատվերը';
+abtn.name = commits[i].name;
+abtn.addEventListener('click', ()=>{  
+  let newarr = [];
+  const getInfostore = JSON.parse(localStorage.getItem('Roll'));
+  for(let i = 0; i < getInfostore.length; i++){
+    
+if(getInfostore[i].name !== abtn.name){
+    newarr.push(getInfostore[i]);
+}
+    
+  }
+    localStorage.setItem('Roll', JSON.stringify(newarr));
+location.reload();
+});
+ 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(setuserp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span4);
+       
+
+      
+
+}
+const resarr = allprice.map(function(item) {
+    return parseInt(item, 10);
+});
+const resp = resarr.reduce((a, b) => a + b);
+
+const pricelot = document.getElementById('price');
+       const pricelotinformation = document.createElement('a');
+       pricelotinformation.style = 'background-color: #130B14';
+pricelotinformation.innerHTML = 'Ընդհանուր արժեք - ' + resp + ' ' + 'դրամ';
+       pricelot.appendChild(pricelotinformation);
+       getBasketSashimi();
+  }).catch(e =>{
+console.log(e);
+  })
+}
+
+
+
+function getBasketSashimi(){
+  let obj = {};
+  const getInfo = JSON.parse(localStorage.getItem('Sashimi'));
+  if(getInfo === null || getInfo == ''){
+getBasketGunkan();
+  }
+  for(let i = 0; i < getInfo.length; i++){
+    let value = getInfo[i].name;
+    let lot = getInfo[i].lot;
+
+    if(obj[value]){ 
+      obj[value].lot += parseInt(lot);
+    } else {
+    obj[value] = {
+      ...getInfo[i],
+      lot: parseInt(lot)
+    };
+    }
+    
+  }
+  const arr = Object.values(obj);
+  
+    fetch("http://localhost:3003/getSashimibasket", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(arr)
+  }).then(response => response.json())
+  .then(commits =>{
+   
+const allprice = []; 
+    const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot;
+        const setuserp = document.createElement('p');
+        setuserp.style = 'color: white; margin-top: 20px';
+        setuserp.innerHTML = "ընտրված քանակ" + ' ' + commits[i].enteredlot;
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.style = 'padding: 1%';
+        divprice.innerHTML = commits[i].price * commits[i].enteredlot + ' ' + 'դրամ';
+        var resnewlot = commits[i].enteredlot;
+        const append = commits[i].price * commits[i].enteredlot;
+        allprice.push(append);
+        divprice.onclick = "addBasket(this)";
+       const abtn = document.createElement('a');
+       const span3 = document.createElement('span');
+        abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'padding: 5%';
+const span4 = document.createElement('span');
+span4.className = 'glyphicon glyphicon-minus';
+abtn.innerHTML = 'Ջնջել պատվերը';
+abtn.name = commits[i].name;
+abtn.addEventListener('click', ()=>{  
+  let newarr = [];
+  const getInfostore = JSON.parse(localStorage.getItem('Sashimi'));
+  for(let i = 0; i < getInfostore.length; i++){
+    
+if(getInfostore[i].name !== abtn.name){
+    newarr.push(getInfostore[i]);
+}
+    
+  }
+    localStorage.setItem('Sashimi', JSON.stringify(newarr));
+location.reload();
+});
+ 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(setuserp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span4);
+       
+
+      
+
+}
+const resarr = allprice.map(function(item) {
+    return parseInt(item, 10);
+});
+const resp = resarr.reduce((a, b) => a + b);
+
+const pricelot = document.getElementById('price');
+       const pricelotinformation = document.createElement('a');
+       pricelotinformation.style = 'background-color: #130B14';
+pricelotinformation.innerHTML = 'Ընդհանուր արժեք - ' + resp + ' ' + 'դրամ';
+       pricelot.appendChild(pricelotinformation);
+       getBasketGunkan();
+  }).catch(e =>{
+console.log(e);
+  })
+}
+function getBasketGunkan(){
+  let obj = {};
+  const getInfo = JSON.parse(localStorage.getItem('Gunkan'));
+  if(getInfo === null || getInfo == ''){
+getBasketMaki();
+  }
+
+  for(let i = 0; i < getInfo.length; i++){
+    let value = getInfo[i].name;
+    let lot = getInfo[i].lot;
+
+    if(obj[value]){ 
+      obj[value].lot += parseInt(lot);
+    } else {
+    obj[value] = {
+      ...getInfo[i],
+      lot: parseInt(lot)
+    };
+    }
+    
+  }
+
+  const arr = Object.values(obj);
+  
+    fetch("http://localhost:3003/getGunkanbasket", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(arr)
+  }).then(response => response.json())
+  .then(commits =>{
+   
+const allprice = []; 
+    const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot;
+        const setuserp = document.createElement('p');
+        setuserp.style = 'color: white; margin-top: 20px';
+        setuserp.innerHTML = "ընտրված քանակ" + ' ' + commits[i].enteredlot;
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.style = 'padding: 1%';
+        divprice.innerHTML = commits[i].price * commits[i].enteredlot + ' ' + 'դրամ';
+        var resnewlot = commits[i].enteredlot;
+        const append = commits[i].price * commits[i].enteredlot;
+        allprice.push(append);
+        divprice.onclick = "addBasket(this)";
+       const abtn = document.createElement('a');
+       const span3 = document.createElement('span');
+        abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'padding: 5%';
+const span4 = document.createElement('span');
+span4.className = 'glyphicon glyphicon-minus';
+abtn.innerHTML = 'Ջնջել պատվերը';
+abtn.name = commits[i].name;
+abtn.addEventListener('click', ()=>{  
+  let newarr = [];
+  const getInfostore = JSON.parse(localStorage.getItem('Gunkan'));
+  for(let i = 0; i < getInfostore.length; i++){
+    
+if(getInfostore[i].name !== abtn.name){
+    newarr.push(getInfostore[i]);
+}
+    
+  }
+    localStorage.setItem('Gunkan', JSON.stringify(newarr));
+location.reload();
+});
+ 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(setuserp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span4);
+       
+
+      
+
+}
+const resarr = allprice.map(function(item) {
+    return parseInt(item, 10);
+});
+const resp = resarr.reduce((a, b) => a + b);
+
+const pricelot = document.getElementById('price');
+       const pricelotinformation = document.createElement('a');
+       pricelotinformation.style = 'background-color: #130B14';
+pricelotinformation.innerHTML = 'Ընդհանուր արժեք - ' + resp + ' ' + 'դրամ';
+       pricelot.appendChild(pricelotinformation);
+       getBasketMaki();
+  }).catch(e =>{
+console.log(e);
+  })
+}
+function getBasketMaki(){
+  let obj = {};
+  const getInfo = JSON.parse(localStorage.getItem('Maki'));
+  if(getInfo === null || getInfo == ''){
+getBasketTemaki();
+  }
+  for(let i = 0; i < getInfo.length; i++){
+    let value = getInfo[i].name;
+    let lot = getInfo[i].lot;
+
+    if(obj[value]){ 
+      obj[value].lot += parseInt(lot);
+    } else {
+    obj[value] = {
+      ...getInfo[i],
+      lot: parseInt(lot)
+    };
+    }
+    
+  }
+  const arr = Object.values(obj);
+  
+    fetch("http://localhost:3003/getMakibasket", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(arr)
+  }).then(response => response.json())
+  .then(commits =>{
+const allprice = []; 
+    const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot;
+        const setuserp = document.createElement('p');
+        setuserp.style = 'color: white; margin-top: 20px';
+        setuserp.innerHTML = "ընտրված քանակ" + ' ' + commits[i].enteredlot;
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.style = 'padding: 1%';
+        divprice.innerHTML = commits[i].price * commits[i].enteredlot + ' ' + 'դրամ';
+        var resnewlot = commits[i].enteredlot;
+        const append = commits[i].price * commits[i].enteredlot;
+        allprice.push(append);
+        divprice.onclick = "addBasket(this)";
+       const abtn = document.createElement('a');
+       const span3 = document.createElement('span');
+        abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'padding: 5%';
+const span4 = document.createElement('span');
+span4.className = 'glyphicon glyphicon-minus';
+abtn.innerHTML = 'Ջնջել պատվերը';
+abtn.name = commits[i].name;
+abtn.addEventListener('click', ()=>{  
+  let newarr = [];
+  const getInfostore = JSON.parse(localStorage.getItem('Maki'));
+  for(let i = 0; i < getInfostore.length; i++){
+    
+if(getInfostore[i].name !== abtn.name){
+    newarr.push(getInfostore[i]);
+}
+    
+  }
+    localStorage.setItem('Maki', JSON.stringify(newarr));
+location.reload();
+});
+ 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(setuserp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span4);
+       
+
+      
+
+}
+const resarr = allprice.map(function(item) {
+    return parseInt(item, 10);
+});
+const resp = resarr.reduce((a, b) => a + b);
+
+const pricelot = document.getElementById('price');
+       const pricelotinformation = document.createElement('a');
+       pricelotinformation.style = 'background-color: #130B14';
+pricelotinformation.innerHTML = 'Ընդհանուր արժեք - ' + resp + ' ' + 'դրամ';
+       pricelot.appendChild(pricelotinformation);
+       getBasketTemaki();
+  }).catch(e =>{
+console.log(e);
+  })
+}
+
+
+
+function getBasketTemaki(){
+  let obj = {};
+  const getInfo = JSON.parse(localStorage.getItem('Temaki'));
+  if(getInfo === null || getInfo == ''){
+getBasketEnd();
+  }
+  for(let i = 0; i < getInfo.length; i++){
+    let value = getInfo[i].name;
+    let lot = getInfo[i].lot;
+
+    if(obj[value]){ 
+      obj[value].lot += parseInt(lot);
+    } else {
+    obj[value] = {
+      ...getInfo[i],
+      lot: parseInt(lot)
+    };
+    }
+    
+  }
+  const arr = Object.values(obj);
+  
+    fetch("http://localhost:3003/getTemakibasket", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(arr)
+  }).then(response => response.json())
+  .then(commits =>{
+const allprice = []; 
+    const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot;
+        const setuserp = document.createElement('p');
+        setuserp.style = 'color: white; margin-top: 20px';
+        setuserp.innerHTML = "ընտրված քանակ" + ' ' + commits[i].enteredlot;
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.style = 'padding: 1%';
+        divprice.innerHTML = commits[i].price * commits[i].enteredlot + ' ' + 'դրամ';
+        var resnewlot = commits[i].enteredlot;
+        const append = commits[i].price * commits[i].enteredlot;
+        allprice.push(append);
+        divprice.onclick = "addBasket(this)";
+       const abtn = document.createElement('a');
+       const span3 = document.createElement('span');
+        abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'padding: 5%';
+const span4 = document.createElement('span');
+span4.className = 'glyphicon glyphicon-minus';
+abtn.innerHTML = 'Ջնջել պատվերը';
+abtn.name = commits[i].name;
+abtn.addEventListener('click', ()=>{  
+  let newarr = [];
+  const getInfostore = JSON.parse(localStorage.getItem('Temaki'));
+  for(let i = 0; i < getInfostore.length; i++){
+    
+if(getInfostore[i].name !== abtn.name){
+    newarr.push(getInfostore[i]);
+}
+    
+  }
+    localStorage.setItem('Temaki', JSON.stringify(newarr));
+location.reload();
+});
+ 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(setuserp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span4);
+       
+
+      
+
+}
+const resarr = allprice.map(function(item) {
+    return parseInt(item, 10);
+});
+const resp = resarr.reduce((a, b) => a + b);
+
+const pricelot = document.getElementById('price');
+       const pricelotinformation = document.createElement('a');
+       pricelotinformation.style = 'background-color: #130B14';
+pricelotinformation.innerHTML = 'Ընդհանուր արժեք - ' + resp + ' ' + 'դրամ';
+       pricelot.appendChild(pricelotinformation);
+       getBasketEnd();
+  }).catch(e =>{
+console.log(e);
+  })
+}
+
+
+
+function getBasketEnd(){
+  console.log('norm');
+}
+  </script>
 </body>
+
 </html>
+

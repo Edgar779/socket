@@ -1,0 +1,556 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+            <div class="container">
+                    <h2>Add Set</h2>
+                    <p>Stex lracnum enq uteliqi bnutagir@ hastatum, voric heto avelanuma hamapatasxan categoriayum</p>
+                    <form action="http://localhost:3003/set" enctype="multipart/form-data" method="POST">
+                      <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" class="form-control" id="name">
+                      </div>
+                      <div class="form-group">
+                        <label for="information">Information:</label>
+                        <input type="text" name="information" class="form-control" id="information">
+                      </div>
+                      <div class="form-group">
+                            <label for="lot">Lot:</label>
+                            <input type="text" name="lot" class="form-control" id="lot">
+                          </div>
+                          <div class="form-group">
+                                <label for="price">Price:</label>
+                                <input type="text" name="price" class="form-control" id="price">
+                              </div>
+                              <input type="file" name="category">
+
+                        <input type="submit" class="form-control" id="send">
+                      
+                    </form>
+                  </div>
+                  <div class="container">
+                        <form>
+                                <h2>Delete Set</h2>
+                                <p>Stex grum eq anun@ uteliqi vor@ petq e jnjvi</p>
+                            <div class="form-group">
+                                <label for="delete"></label>
+                                    <input type="text" name="delete" class="form-control" id="delete">
+                            </div>
+                            <input type="button" value="Delete" class="form-control" onclick="deleteButton(this)" id="deletebutton">
+                            <h2 id="removed"></h2>
+                        </form>
+                  </div>
+
+                  <div class="container">
+                      <h2>Add Sushi</h2>
+                      <p>Stex lracnum enq uteliqi bnutagir@ hastatum, voric heto avelanuma hamapatasxan categoriayum</p>
+                      <form action="http://localhost:3003/addsushi" enctype="multipart/form-data" method="POST">
+                        <div class="form-group">
+                          <label for="name">Name:</label>
+                          <input type="text" name="name" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                          <label for="information">Information:</label>
+                          <input type="text" name="information" class="form-control" id="information">
+                        </div>
+                        <div class="form-group">
+                              <label for="lot">Lot:</label>
+                              <input type="text" name="lot" class="form-control" id="lot">
+                            </div>
+                            <div class="form-group">
+                                  <label for="price">Price:</label>
+                                  <input type="text" name="price" class="form-control" id="price">
+                                </div>
+                                <input type="file" name="category">
+  
+                          <input type="submit" class="form-control" id="send">
+                        
+                      </form>
+                    </div>
+                    <div class="container">
+                          <form>
+                                  <h2>Delete Sushi</h2>
+                                  <p>Stex grum eq anun@ uteliqi vor@ petq e jnjvi</p>
+                              <div class="form-group">
+                                  <label for="delete"></label>
+                                      <input type="text" name="deletesushi" class="form-control" id="deletesushi">
+                              </div>
+                              <input type="button" value="Delete" class="form-control" onclick="deletesushiButton(this)" id="deletesushibutton">
+                              <h2 id="removedsushi"></h2>
+                          </form>
+                    </div>
+
+                    <div class="container">
+                        <h2>Add Roll</h2>
+                        <p>Stex lracnum enq uteliqi bnutagir@ hastatum, voric heto avelanuma hamapatasxan categoriayum</p>
+                        <form action="http://localhost:3003/addroll" enctype="multipart/form-data" method="POST">
+                          <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="information">Information:</label>
+                            <input type="text" name="information" class="form-control" id="information">
+                          </div>
+                          <div class="form-group">
+                                <label for="lot">Lot:</label>
+                                <input type="text" name="lot" class="form-control" id="lot">
+                              </div>
+                              <div class="form-group">
+                                    <label for="price">Price:</label>
+                                    <input type="text" name="price" class="form-control" id="price">
+                                  </div>
+                                  <input type="file" name="category">
+    
+                            <input type="submit" class="form-control" id="send">
+                          
+                        </form>
+                      </div>
+
+                      <div class="container">
+                          <form>
+                                  <h2>Delete Roll</h2>
+                                  <p>Stex grum eq anun@ uteliqi vor@ petq e jnjvi</p>
+                              <div class="form-group">
+                                  <label for="delete"></label>
+                                      <input type="text" name="deleteroll" class="form-control" id="deleteroll">
+                              </div>
+                              <input type="button" value="Delete" class="form-control" onclick="deleterollButton(this)" id="deleterollbutton">
+                              <h2 id="removedroll"></h2>
+                          </form>
+                    </div>
+
+                    
+                    <div class="container">
+                        <h2>Add Sashimi</h2>
+                        <p>Stex lracnum enq uteliqi bnutagir@ hastatum, voric heto avelanuma hamapatasxan categoriayum</p>
+                        <form action="http://localhost:3003/addsashimi" enctype="multipart/form-data" method="POST">
+                          <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="information">Information:</label>
+                            <input type="text" name="information" class="form-control" id="information">
+                          </div>
+                          <div class="form-group">
+                                <label for="lot">Lot:</label>
+                                <input type="text" name="lot" class="form-control" id="lot">
+                              </div>
+                              <div class="form-group">
+                                    <label for="price">Price:</label>
+                                    <input type="text" name="price" class="form-control" id="price">
+                                  </div>
+                                  <input type="file" name="category">
+    
+                            <input type="submit" class="form-control" id="send">
+                          
+                        </form>
+                      </div>
+
+                      <div class="container">
+                          <form>
+                                  <h2>Delete Sashimi</h2>
+                                  <p>Stex grum eq anun@ uteliqi vor@ petq e jnjvi</p>
+                              <div class="form-group">
+                                  <label for="delete"></label>
+                                      <input type="text" name="deletesashimi" class="form-control" id="deletesashimi">
+                              </div>
+                              <input type="button" value="Delete" class="form-control" onclick="deletesashimiButton(this)" id="deletesashimibutton">
+                              <h2 id="removedsashimi"></h2>
+                          </form>
+                    </div>
+
+                    <div class="container">
+                        <h2>Add Gunkan</h2>
+                        <p>Stex lracnum enq uteliqi bnutagir@ hastatum, voric heto avelanuma hamapatasxan categoriayum</p>
+                        <form action="http://localhost:3003/addgunkan" enctype="multipart/form-data" method="POST">
+                          <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="information">Information:</label>
+                            <input type="text" name="information" class="form-control" id="information">
+                          </div>
+                          <div class="form-group">
+                                <label for="lot">Lot:</label>
+                                <input type="text" name="lot" class="form-control" id="lot">
+                              </div>
+                              <div class="form-group">
+                                    <label for="price">Price:</label>
+                                    <input type="text" name="price" class="form-control" id="price">
+                                  </div>
+                                  <input type="file" name="category">
+    
+                            <input type="submit" class="form-control" id="send">
+                          
+                        </form>
+                      </div>
+
+                      <div class="container">
+                          <form>
+                                  <h2>Delete Gunkan</h2>
+                                  <p>Stex grum eq anun@ uteliqi vor@ petq e jnjvi</p>
+                              <div class="form-group">
+                                  <label for="delete"></label>
+                                      <input type="text" name="deletegunkan" class="form-control" id="deletegunkan">
+                              </div>
+                              <input type="button" value="Delete" class="form-control" onclick="deletegunkanButton(this)" id="deletegunkanbutton">
+                              <h2 id="removedgunkan"></h2>
+                          </form>
+                    </div>
+
+                    
+                    <div class="container">
+                        <h2>Add maki futo maki</h2>
+                        <p>Stex lracnum enq uteliqi bnutagir@ hastatum, voric heto avelanuma hamapatasxan categoriayum</p>
+                        <form action="http://localhost:3003/addmaki" enctype="multipart/form-data" method="POST">
+                          <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="information">Information:</label>
+                            <input type="text" name="information" class="form-control" id="information">
+                          </div>
+                          <div class="form-group">
+                                <label for="lot">Lot:</label>
+                                <input type="text" name="lot" class="form-control" id="lot">
+                              </div>
+                              <div class="form-group">
+                                    <label for="price">Price:</label>
+                                    <input type="text" name="price" class="form-control" id="price">
+                                  </div>
+                                  <input type="file" name="category">
+    
+                            <input type="submit" class="form-control" id="send">
+                          
+                        </form>
+                      </div>
+
+                      <div class="container">
+                          <form>
+                                  <h2>Delete Maki futomaki</h2>
+                                  <p>Stex grum eq anun@ uteliqi vor@ petq e jnjvi</p>
+                              <div class="form-group">
+                                  <label for="delete"></label>
+                                      <input type="text" name="deletemaki" class="form-control" id="deletemaki">
+                              </div>
+                              <input type="button" value="Delete" class="form-control" onclick="deletemakiButton(this)" id="deletemakibutton">
+                              <h2 id="removedmaki"></h2>
+                          </form>
+                    </div>
+
+                    <div class="container">
+                        <h2>Add Temaki</h2>
+                        <p>Stex lracnum enq uteliqi bnutagir@ hastatum, voric heto avelanuma hamapatasxan categoriayum</p>
+                        <form action="http://localhost:3003/addtemaki" enctype="multipart/form-data" method="POST">
+                          <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="information">Information:</label>
+                            <input type="text" name="information" class="form-control" id="information">
+                          </div>
+                          <div class="form-group">
+                                <label for="lot">Lot:</label>
+                                <input type="text" name="lot" class="form-control" id="lot">
+                              </div>
+                              <div class="form-group">
+                                    <label for="price">Price:</label>
+                                    <input type="text" name="price" class="form-control" id="price">
+                                  </div>
+                                  <input type="file" name="category">
+    
+                            <input type="submit" class="form-control" id="send">
+                          
+                        </form>
+                      </div>
+
+                      <div class="container">
+                          <form>
+                                  <h2>Delete Temaki</h2>
+                                  <p>Stex grum eq anun@ uteliqi vor@ petq e jnjvi</p>
+                              <div class="form-group">
+                                  <label for="delete"></label>
+                                      <input type="text" name="deletetemaki" class="form-control" id="deletetemaki">
+                              </div>
+                              <input type="button" value="Delete" class="form-control" onclick="deletetemakiButton(this)" id="deletetetemakibutton">
+                              <h2 id="removedtemaki"></h2>
+                          </form>
+                    </div>
+
+      
+    </body>
+    <script>
+        function deleteButton(e){
+              const deleteFood = document.getElementById('delete').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFood", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removed');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+            // console.log('ok');
+//             let newarr = [];
+// console.log('mtav');
+//             const deleteFood = document.getElementById('delete').value;
+//             const getInfostore = JSON.parse(localStorage.getItem('Info'));
+//   for(let i = 0; i < getInfostore.length; i++){
+    
+// if(getInfostore[i].name !== deleteFood){
+//     newarr.push(getInfostore[i]);
+// }
+    
+//   }
+//     localStorage.setItem('Info', JSON.stringify(newarr));
+//     location.reload();
+        }
+
+        function deletesushiButton(e){
+          const deleteFood = document.getElementById('deletesushi').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFoodSushi", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedsushi');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+        }
+
+        function deleterollButton(e){
+          const deleteFood = document.getElementById('deleteroll').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFoodRoll", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedroll');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+        }
+
+        function deletesashimiButton(e){
+          const deleteFood = document.getElementById('deletesashimi').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFoodSashimi", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedsashimi');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+        }
+
+        function deletegunkanButton(e){
+          const deleteFood = document.getElementById('deletegunkan').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFoodGunkan", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedgunkan');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+        }
+        function deletemakiButton(e){
+          const deleteFood = document.getElementById('deletemaki').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFoodMaki", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedmaki');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+        }
+
+
+
+
+
+        
+        function deletetemakiButton(){
+
+      const deleteFood = document.getElementById('deletegunkan').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFoodGunkan", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedgunkan');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+        }
+        function deletemakiButton(e){
+          const deleteFood = document.getElementById('deletemaki').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFoodMaki", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedmaki');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+          
+        }
+
+
+
+
+
+
+
+
+        function deletetemakiButton(e){
+          const deleteFood = document.getElementById('deletetemaki').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("http://localhost:3003/deleteFoodTemaki", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedtemaki');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+          
+        }
+
+    </script>
+</html>
+<!-- <form action="http://localhost:3003/set" enctype="multipart/form-data" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="information" placeholder="information">
+    <input type="text" name="lot" placeholder="lot">
+    <input type="text" name="price" placeholder="price">
+    <input type="file" name="category">
+
+    <input type="submit" value="Send">
+  </form> -->

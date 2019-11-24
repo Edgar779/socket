@@ -298,7 +298,7 @@ header h1 a img {
 	padding: 0 10px;
 }
 
-.carousel1 li .price {
+ .price {
 	display: inline-block;
 	background: #699440;
 	color: #fff;

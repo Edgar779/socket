@@ -3,6 +3,11 @@
 
 <head>
   <title><img src="images/sushiclub.jpg" alt=""></title>
+  <style>
+  .menuImg{
+    height: 130px;
+  }
+  </style>
   <meta charset="utf-8">
   <link rel="icon" href="images/favicon.ico">
   <link rel="shortcut icon" href="images/favicon.ico">
@@ -38,14 +43,14 @@
           <nav>
             <ul class="sf-menu">
               <li><a href="index.html" style="color: #4DE304; background-color: #130B14;">Home</a></li>
-              <li><a href="about-us.html" style="color: #4DE304; background-color: #130B14;">About Us</a>
+              <li><a href="about-us.html" style="color: #4DE304; background-color: #130B14;">Basket</a>
 
               </li>
               <li><a href="menu.html" style="color: #4DE304; background-color: #130B14;">Menu</a></li>
-              <li><a href="portfolio.html" style="color: #4DE304; background-color: #130B14;">Portfolio</a></li>
-              <li><a href="news.html" style="color: #4DE304; background-color: #130B14;">News</a></li>
+              <li><a  style="color: #4DE304; background-color: #130B14;"></a></li>
+              <li><a  style="color: #4DE304; background-color: #130B14;"></a></li>
               <li class="current"><a href="contacts.html"
-                  style="color: #4DE304; background-color: #130B14;">Contacts</a></li>
+                  style="color: #4DE304; background-color: #130B14;"></a></li>
             </ul>
           </nav>
           <div class="clear"></div>
@@ -55,266 +60,174 @@
     </div>
   </header>
   <div class="content" style="background-color: #130B14;">
+   
     <div class="container_12">
-      <div id="contain" style="width: 100%; margin-top: 150px;">
-        <ul class="carousel1" id="carousel1">
-          <li style="margin-top: 50px;">
-            <div><img src="images/page1_img3.jpg" alt="">
-              <p style="color: white; font-size: 16px;">Gunka</p>
-              <div class="col1 upp">
-                <p class="sushi-information">Lorem ipsum doamet consectet</p>
-              </div>
-              <span class="sushi-information"> Dorem ipsum dolor amet consectetur</span>
-              <div class="price">45$</div>
-
-              <div class="input-group" style="width: 70%; margin-top: 10px;">
-                <span class="input-group-btn">
-                  <button type="button" class="btn btn-danger btn-number">
-                    <span class="glyphicon glyphicon-minus"></span>
-                  </button>
-                </span>
-                <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
-                <span class="input-group-btn">
-                  <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                    <span class="glyphicon glyphicon-plus"></span>
-                  </button>
-                </span>
-              </div>
-              <a onclick="addBasket()" class="btn btn-info btn-lg" style="background-color: #5fa022; padding: 5%;">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Ավելացնել զամբյուղ
-              </a>
-            </div>
-          </li>
-        </ul>
-
+      <div id="contain" style="width: 100%; margin-top: 50px;">
+        <div class="row">
+          <div class="col-md-12" id="setMenu">
+           
+          </div>
+        
+        </div>
       </div>
       <div class="clear"></div>
       <div class="bottom_block">
         <div class="grid_6">
-          <h3>Follow Us</h3>
-          <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+          <h3 style="color: #4DE304;">Follow Us</h3>
+          <div class="socials"> <a href="https://www.facebook.com/21sushiclub/" target="_blank"></a> </div>
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="about-us.html">Basket</a></li>
               <li><a href="menu.html">Menu</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="news.html">News</a></li>
+              <!-- <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="news.html">News</a></li> -->
               <li class="current"><a href="contacts.html">Contacts</a></li>
             </ul>
           </nav>
         </div>
         <div class="grid_6">
-          <h3>Email Updates</h3>
-          <p class="col1">Join our digital mailing list and get news<br>
-            deals and be first to know about events</p>
-          <form id="newsletter" action="#">
-            <div class="success">Your subscribe request has been sent!</div>
-            <label class="email">
-              <input type="email" value="Enter e-mail address">
-              <a href="#" class="btn" data-type="submit">subscribe</a> <span class="error">*This is not a valid email
-                address.</span> </label>
-          </form>
-        </div>
+            <h3 style="color: #5fa022">Էլեկտրոնային հասցե</h3>
+            <p class="col1" style="color: white">Ստացիր նորություններ, կատարիր
+                գործարքներ և առաջինը իմանացիր իրադարձությունների մասին<br>
+              </p>
+              <form id="newsletter" action="#">
+                  <div class="success">Your subscribe request has been sent!</div>
+                  <label class="email">
+                    <input type="email" value="Enter e-mail address" >
+                    <a href="https://www.facebook.com/21sushiclub/" target="_blank" class="btn" data-type="submit" style="background-color: #5fa022;">Հետևել</a> <span class="error">*This is not a valid email address.</span> </label>
+                </form>
+          </div>
       </div>
       <div class="clear"></div>
     </div>
   </div>
   </div>
-  <form action="http://localhost:3003/set" enctype="multipart/form-data" method="POST">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="information" placeholder="information">
-    <input type="text" name="lot" placeholder="lot">
-    <input type="text" name="price" placeholder="price">
-    <input type="file" name="category">
-
-    <input type="submit" value="Send">
-  </form>
+ 
   <footer>
     <div class="container_12">
-      <div class="grid_12"> Gourmet Traditional Restaurant &copy; 2045 | <a href="#">Privacy Policy</a> | Design by: <a
-          href="http://www.templatemonster.com/">TemplateMonster.com</a> </div>
+      <div class="grid_12"> Sushi Club &copy; 2019 | <a href="#">Privacy Policy</a> </div>
       <div class="clear"></div>
     </div>
   </footer>
 
 
-
-
-  <!-- <div style="width: 200px; height: 200px;">
-    <img src="uploads/a4f6f235cf0a11e9c2ecdb41d4118c0d" alt="">
-  </div>
-  <a href="http://localhost:3003/set">aaa</a> -->
-
-
   <script>
     fetch("http://localhost:3003/getsetmenu").then(response => response.json())
       .then(commits => {
-        console.log(commits);
-        const carousel1 = document.getElementById('carousel1');
-        for (let i = 0; i < commits.length; i++) {
-          const setli = document.createElement('li');
-          setli.style = 'margin-top: 50px';
-          const divmain = document.createElement('div');
-          const setimg = document.createElement('img');
-          setimg.src = 'uploads/' + commits[i].img;
+       const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.innerHTML = commits[i].price;
+        divprice.onclick = "addBasket(this)";
+        const divinputgroup = document.createElement('div');
+        divinputgroup.className = "input-group";
+divinputgroup.style = "width: 70%; margin-top: 20px";
+const spaninputgroupbtn = document.createElement('span');
+spaninputgroupbtn.className = 'input-group-btn';
+const buttonbtnnumber = document.createElement('button');
+buttonbtnnumber.className = 'btn btn-danger btn-number';
+const spanminus = document.createElement('span');
+spanminus.className = 'glyphicon glyphicon-minus';
+buttonbtnnumber.addEventListener('click', (e)=>{
+  inputnumber.value--;
+  if(inputnumber.value <= 0){
+inputnumber.value++
+  }
+});
+const inputnumber = document.createElement('input');
+inputnumber.type = 'text';
+// inputnumber.name = commits[i].name;
+inputnumber.className = 'form-control input-number';
+inputnumber.value = '1';
+inputnumber.min = '1';
+inputnumber.max = '100';
+const spanone = document.createElement('span');
+spanone.className = 'input-group-btn';
+const buttonone = document.createElement('button');
+buttonone.className = 'btn btn-success btn-number';
+const spantwo = document.createElement('span');
+spantwo.className = 'glyphicon glyphicon-plus';
+// buttonone.name = commits[i].name;
+buttonone.addEventListener('click', (e)=>{
+  inputnumber.value++;
+});
+const abtn = document.createElement('a');
 
-          const setp = document.createElement('p');
-          setp.innerHTML = commits[i].name;
-          setp.style = 'color: white; font-size: 16px';
-          const setdivcol1upp = document.createElement('div');
-          setdivcol1upp.className = "col1 upp";
-          const setpsushiinformation = document.createElement('p');
-          setpsushiinformation.className = 'sushi-information';
-          setpsushiinformation.innerHTML = commits[i].information;
-          // setpsushiinformation.style = "color: white";
-          const setspan = document.createElement('span');
-          setspan.className = 'sushi-information';
-          setspan.innerHTML = commits[i].lot;
-          const setdivprice = document.createElement('div');
-          setdivprice.className = 'price';
-          setdivprice.innerHTML = commits[i].price;
-          const setdivinputgroup = document.createElement('div');
-          setdivinputgroup.className = 'input-group';
-          setdivinputgroup.style = 'width: 70%; margin-top: 10px';
 
-          const setspaninputgroupbtn = document.createElement('span');
-          setdivinputgroup.className = 'input-group-btn';
-          const setbutton = document.createElement('button');
-          setbutton.type = 'button';
-          setbutton.className = 'btn btn-danger btn-number';
+// arr.push(getinfo);
+abtn.addEventListener('click', ()=>{
+  let arr = JSON.parse(localStorage.getItem('Info')) || [];
 
-          const setspanglyphiconminus = document.createElement('span');
-          setspanglyphiconminus.className = 'glyphicon glyphicon-minus';
-          const setinput = document.createElement('input');
-          setinput.className = 'form-control input-number';
-          setinput.value = '1';
-          setinput.min = '1';
-          setinput.max = '100';
-          const setspaninputgroup = document.createElement('span');
-          const setbuttonbtnbtnsuccess = document.createElement('button');
-          setbuttonbtnbtnsuccess.className = 'btn btn-success btn-number';
-          const setspanglyglyphiconplus = document.createElement('span');
-          setspanglyglyphiconplus.className = 'glyphicon glyphicon-plus';
+  const info = {
 
-          const setaddBasket = document.createElement('a');
-          setaddBasket.onclick = 'addBasket()';
-          setaddBasket.className = 'btn btn-info btn-lg';
-          setaddBasket.style = 'background-color: #5fa022; padding: 5%';
-          const setspanshoppingcart = document.createElement('span');
-          setspanshoppingcart.className = 'glyphicon glyphicon-shopping-cart';
-          carousel1.appendChild(setli);
-          setli.appendChild(divmain);
-          divmain.appendChild(setimg);
-          divmain.appendChild(setp);
-          divmain.appendChild(setdivcol1upp);
-          setdivcol1upp.appendChild(setpsushiinformation);
-          divmain.appendChild(setspan);
-          divmain.appendChild(setdivprice);
-          divmain.appendChild(setdivinputgroup);
-          setdivinputgroup.appendChild(setspaninputgroupbtn);
-          setspaninputgroupbtn.appendChild(setbutton);
-          setbutton.appendChild(setspanglyphiconminus);
-          setdivinputgroup.appendChild(setinput);
-          setdivinputgroup.appendChild(setspaninputgroup);
-          setspaninputgroup.appendChild(setbuttonbtnbtnsuccess);
-          setbuttonbtnbtnsuccess.appendChild(setspanglyglyphiconplus);
-          divmain.appendChild(setaddBasket);
-          setaddBasket.appendChild(setspanshoppingcart);
-          // <li style="margin-top: 50px;">
-        //               <div><img src="images/page1_img3.jpg" alt="">
-        //                 <p style="color: white; font-size: 16px;">Gunka</p>
-        //                 <div class="col1 upp"> <p class="sushi-information">Lorem ipsum doamet consectet</p></div>
-        //                 <span class="sushi-information"> Dorem ipsum dolor amet consectetur</span>
-        //                 <div class="price">45$</div>
+      'name': commits[i].name,
+      'lot': inputnumber.value
+    }
 
-        // <div class="input-group" style="width: 70%; margin-top: 10px;">
-        //                       <span class="input-group-btn">
-        //                           <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-        //                             <span class="glyphicon glyphicon-minus"></span>
-        //                           </button>
-        //                       </span>
-        //                       <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
-        //                       <span class="input-group-btn">
-        //                           <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-        //                               <span class="glyphicon glyphicon-plus"></span>
-        //                           </button>
-        //                       </span>
-        //                   </div>
-        //                   <a href="#" class="btn btn-info btn-lg" style="background-color: #5fa022; padding: 5%;">
-        //                       <span class="glyphicon glyphicon-shopping-cart"></span> Ավելացնել զամբյուղ
-        //                     </a>
-        //               </div>
-        //             </li>
-        }
+
+  arr.push(info);
+
+  localStorage.setItem("Info", JSON.stringify(arr));
+  inputnumber.value = '1';
+  pinform.innerHTML = 'Հաջողությամբ ավելացվել է, կարող եք տեսնել զամբյուղ բաժնում';
+
+setTimeout(() => {
+  pinform.innerHTML = '';
+}, 2000);
+
+});
+
+abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'background-color: #5fa022; padding: 5%';
+const span3 = document.createElement('span');
+span3.className = 'glyphicon glyphicon-shopping-cart';
+abtn.innerHTML = 'Ավելացնել զամբյուղ';
+const pinform = document.createElement('p');
+pinform.style = 'margin-top: 10px; color: #4DE304';
+abtn.name = commits[i].name; 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(divinputgroup);
+        divinputgroup.appendChild(spaninputgroupbtn);
+        spaninputgroupbtn.appendChild(buttonbtnnumber);
+        buttonbtnnumber.appendChild(spanminus);
+        divinputgroup.appendChild(inputnumber);
+        divinputgroup.appendChild(spanone);
+        spanone.appendChild(buttonone);
+        buttonone.appendChild(spantwo);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span3);
+        divcolmd.appendChild(pinform);
+       }
       })
-
-//     async function menu() {
-//       fetch("http://localhost:3003/getmenuSushi").then(response => response.json())
-//         .then(commits => {
-//           const menuContainer = document.getElementById('menuContainer');
-//           for (let i = 0; i < commits.length; i++) {
-//             var div = document.createElement("div");
-//             var img = document.createElement("img");
-//             var h2 = document.createElement("h2");
-//             var p = document.createElement("p");
-//             var h3 = document.createElement("h3");
-//             img.src = "images/" + commits[i].img
-//             h2.innerHTML = commits[i].name;
-//             p.innerHTML = commits[i].information;
-//             h3.innerHTML = commits[i].price;
-//             menuContainer.appendChild(div);
-//             div.appendChild(img);
-//             div.appendChild(h2);
-//             div.appendChild(p);
-//             div.appendChild(h3);
-//           }
-//         });
-//     }
-// menu();
-
-      // console.log(res);
-
-
-  //   const response = fetch('http://localhost:3003/getmenu', {
-  //   method: 'GET', // *GET, POST, PUT, DELETE, etc.
-  //   mode: 'cors', // no-cors, *cors, same-origin
-  //   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-  //   credentials: 'same-origin', // include, *same-origin, omit
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //     // 'Content-Type': 'application/x-www-form-urlencoded',
-  //   },
-  //    // manual, *follow, error
-  //    // no-referrer, *client
-  //    // body data type must match "Content-Type" header
-  // });
-    // console.log(JSON.stringify(response));
+   
   </script>
 </body>
 
 </html>
-
-
-<!-- <div class="containe" style="margin-top: 100px;">
-                    <form>
-                      <div class="form-group">
-                        <label for="usr" style="color: white;">Name:</label>
-                        <input type="text" class="form-control" id="usr">
-                      </div>
-                      <div class="form-group">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd">
-                      </div>
-                    </form>
-                  </div> -->
-
-<!-- <form action="http://localhost:3003/set" enctype="multipart/form-data" method="POST">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="information" placeholder="information">
-    <input type="text" name="lot" placeholder="lot">
-    <input type="text" name="price" placeholder="price">
-    <input type="file" name="category">
-
-    <input type="submit" value="Send">
-  </form> -->

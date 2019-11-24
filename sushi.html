@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title><img src="images/sushiclub.jpg" alt=""></title>
+  <style>
+  .menuImg{
+    height: 130px;
+  }
+  </style>
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.1.1.js"></script>
+  <script src="js/superfish.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/sForm.js"></script>
+  <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+  <script src="js/tms-0.4.1.js"></script>
+
+  <!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+
+<body style="background-color: #5fa022;">
+  <header style="background-color: #130B14">
+    <div class="container_12">
+      <div class="grid_12">
+        <h1><a href="index.html"><img style="z-index: 1; width: 27%; border-radius: 50%; position: absolute;"
+              src="images/sushiclub.jpg" alt=""></a></h1>
+
+        <div class="menu_block">
+          <nav>
+            <ul class="sf-menu">
+              <li><a href="index.html" style="color: #4DE304; background-color: #130B14;">Home</a></li>
+              <li><a href="about-us.html" style="color: #4DE304; background-color: #130B14;">Basket</a>
+
+              </li>
+              <li><a href="menu.html" style="color: #4DE304; background-color: #130B14;">Menu</a></li>
+              <li><a  style="color: #4DE304; background-color: #130B14;"></a></li>
+              <li><a  style="color: #4DE304; background-color: #130B14;"></a></li>
+              <li class="current"><a href="contacts.html"
+                  style="color: #4DE304; background-color: #130B14;"></a></li>
+            </ul>
+          </nav>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </header>
+  <div class="content" style="background-color: #130B14;">
+   
+    <div class="container_12">
+      <div id="contain" style="width: 100%; margin-top: 50px;">
+        <div class="row">
+          <div class="col-md-12" id="setMenu">
+           
+          </div>
+        
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="bottom_block">
+        <div class="grid_6">
+          <h3 style="color: #4DE304;">Follow Us</h3>
+          <div class="socials"> <a href="https://www.facebook.com/21sushiclub/" target="_blank"></a> </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">Basket</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <!-- <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="news.html">News</a></li> -->
+              <li class="current"><a href="contacts.html">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid_6">
+            <h3 style="color: #5fa022">Էլեկտրոնային հասցե</h3>
+            <p class="col1" style="color: white">Ստացիր նորություններ, կատարիր
+                գործարքներ և առաջինը իմանացիր իրադարձությունների մասին<br>
+              </p>
+              <form id="newsletter" action="#">
+                  <div class="success">Your subscribe request has been sent!</div>
+                  <label class="email">
+                    <input type="email" value="Enter e-mail address" >
+                    <a href="https://www.facebook.com/21sushiclub/" target="_blank" class="btn" data-type="submit" style="background-color: #5fa022;">Հետևել</a> <span class="error">*This is not a valid email address.</span> </label>
+                </form>
+          </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  </div>
+ 
+  <footer>
+    <div class="container_12">
+      <div class="grid_12"> Sushi Club &copy; 2019 | <a href="#">Privacy Policy</a> </div>
+      <div class="clear"></div>
+    </div>
+  </footer>
+
+
+  <script>
+    fetch("http://localhost:3003/getushimenu").then(response => response.json())
+      .then(commits => {
+       const sentMenu = document.getElementById('setMenu');
+       for(let i = 0; i < commits.length; i++){
+        const divcolmd = document.createElement('div');
+        divcolmd.className = 'col-md-3';
+        divcolmd.style = 'margin-top: 100px';
+        const setImg = document.createElement('img');
+        setImg.src = 'uploads/' + commits[i].img;
+        setImg.className = "menuImg";
+        // setImg.attributes = "heigth: 130px";
+        // setImg.style = 'width: 70%';
+        const seth4 = document.createElement('h4');
+        seth4.style = "color: white";
+        seth4.innerHTML = commits[i].name;
+        const divheight = document.createElement('div');
+        divheight.style = 'height: 80px';
+        const divheightp = document.createElement('p');
+        divheightp.innerHTML = commits[i].information;
+        divheightp.style = 'color: white; margin-top: 20px';
+        const setp = document.createElement('p');
+        setp.style = 'color: white; margin-top: 20px';
+        setp.innerHTML = commits[i].lot
+        const divprice = document.createElement('div');
+        divprice.className = "price";
+        divprice.innerHTML = commits[i].price;
+        divprice.onclick = "addBasket(this)";
+        const divinputgroup = document.createElement('div');
+        divinputgroup.className = "input-group";
+divinputgroup.style = "width: 70%; margin-top: 20px";
+const spaninputgroupbtn = document.createElement('span');
+spaninputgroupbtn.className = 'input-group-btn';
+const buttonbtnnumber = document.createElement('button');
+buttonbtnnumber.className = 'btn btn-danger btn-number';
+const spanminus = document.createElement('span');
+spanminus.className = 'glyphicon glyphicon-minus';
+buttonbtnnumber.addEventListener('click', (e)=>{
+  inputnumber.value--;
+  if(inputnumber.value <= 0){
+inputnumber.value++
+  }
+});
+const inputnumber = document.createElement('input');
+inputnumber.type = 'text';
+// inputnumber.name = commits[i].name;
+inputnumber.className = 'form-control input-number';
+inputnumber.value = '1';
+inputnumber.min = '1';
+inputnumber.max = '100';
+const spanone = document.createElement('span');
+spanone.className = 'input-group-btn';
+const buttonone = document.createElement('button');
+buttonone.className = 'btn btn-success btn-number';
+const spantwo = document.createElement('span');
+spantwo.className = 'glyphicon glyphicon-plus';
+// buttonone.name = commits[i].name;
+buttonone.addEventListener('click', (e)=>{
+  inputnumber.value++;
+});
+const abtn = document.createElement('a');
+
+
+// arr.push(getinfo);
+abtn.addEventListener('click', ()=>{
+  let arr = JSON.parse(localStorage.getItem('Sushi')) || [];
+
+  const info = {
+
+      'name': commits[i].name,
+      'lot': inputnumber.value
+    }
+
+
+  arr.push(info);
+
+  localStorage.setItem("Sushi", JSON.stringify(arr));
+  inputnumber.value = '1';
+  pinform.innerHTML = 'Հաջողությամբ ավելացվել է, կարող եք տեսնել զամբյուղ բաժնում';
+
+setTimeout(() => {
+  pinform.innerHTML = '';
+}, 2000);
+
+});
+
+abtn.className = 'btn btn-info btn-lg'; 
+abtn.style = 'background-color: #5fa022; padding: 5%';
+const span3 = document.createElement('span');
+span3.className = 'glyphicon glyphicon-shopping-cart';
+abtn.innerHTML = 'Ավելացնել զամբյուղ';
+const pinform = document.createElement('p');
+pinform.style = 'margin-top: 10px; color: #4DE304';
+abtn.name = commits[i].name; 
+        sentMenu.appendChild(divcolmd);
+        divcolmd.appendChild(setImg);
+        divcolmd.appendChild(seth4);
+        divcolmd.appendChild(divheight);
+        divheight.appendChild(divheightp);
+        divcolmd.appendChild(setp);
+        divcolmd.appendChild(divprice);
+        divcolmd.appendChild(divinputgroup);
+        divinputgroup.appendChild(spaninputgroupbtn);
+        spaninputgroupbtn.appendChild(buttonbtnnumber);
+        buttonbtnnumber.appendChild(spanminus);
+        divinputgroup.appendChild(inputnumber);
+        divinputgroup.appendChild(spanone);
+        spanone.appendChild(buttonone);
+        buttonone.appendChild(spantwo);
+        divcolmd.appendChild(abtn);
+        abtn.appendChild(span3);
+        divcolmd.appendChild(pinform);
+       }
+      })
+   
+  </script>
+</body>
+
+</html>
