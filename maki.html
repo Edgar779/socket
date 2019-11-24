@@ -113,7 +113,7 @@
 
 
   <script>
-    fetch("http://localhost:3003/getsetmaki").then(response => response.json())
+    fetch("https://sushi-test778.herokuapp.com/getsetmaki").then(response => response.json())
       .then(commits => {
        const sentMenu = document.getElementById('setMenu');
        for(let i = 0; i < commits.length; i++){
