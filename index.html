@@ -18,6 +18,57 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
+  
+
+  @import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+.smoky {
+  display: inline-block;
+  text-shadow: 0 0 0 whitesmoke;
+  animation: smoky 5s 3s both;
+}
+
+.smoky:nth-child(even){
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform:
+      translate3d(15rem,-8rem,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke; }
+  to {
+    transform:
+      translate3d(18rem,-8rem,0)
+      rotate(-40deg) 
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+/* @for $item from 1 through 21 {
+  span:nth-of-type(#{$item}){ 
+    animation-delay: #{(3 + ($item/10))}s; 
+  }
+} 
+   */
   #logosushi{
 color: white;
   }
@@ -25,12 +76,12 @@ color: white;
 #bac {
 background-image: url('images/downloadtextureblackstonewalltexturebackgrounddownloaddesignstonetexture580_yapfiles.ru.jpg');
 }
-#headcar {
+/* #headcar {
   background-image: url('images/maxresdefault.jpg');
-}
-footer {
+} */
+/* footer {
   background-image: url('images/maxresdefault.jpg');
-}
+} */
 /* #bodyback{ */
   /* background-image: url('images/downloadtextureblackstonewalltexturebackgrounddownloaddesignstonetexture580_yapfiles.ru.jpg'); */
 
@@ -45,14 +96,13 @@ footer {
 <![endif]-->
 </head>
 <body style="background-color: #130B14;" id="bodyback"> 
-  
-<div class="main">
+
   <!-- <img src="images/460dd7fb5cab4d41dfa8dd9341d452fc.jpg" alt=""> -->
   <header  style="background-color: #130B14" id="headcar">
     <div class="container_12">
       <div class="grid_12">
           <div class="navbar-header" style="margin-top: 30px; height: 50px;">
-              <a class="navbar-brand" href="#" style="color: white;"><h4 style="font-size: 30px; margin-top: -10px;">𝒮𝓊𝓈𝒽𝒾 𝒞𝓁𝓊𝒷</h4></a>
+              <a class="navbar-brand" href="#" style="color: white;"><h4 style="font-size: 30px; margin-top: -10px;"><span class="smoky">2</span><span class="smoky">1</span><span>&nbsp;</span><span class="smoky">S</span><span class="smoky">u</span><span class="smoky">sh</span><span class="smoky">i</span><span>&nbsp;</span><span class="smoky">C</span><span class="smoky">l</span><span class="smoky">u</span><span class="smoky">b</span></h4></a>
             </div>  
         <!-- <p id="logosushi">sdsds</p> -->
         <!-- <h1 id="logosushi">21 Sushi Club</h1> -->
@@ -169,28 +219,6 @@ footer {
   <div class="content page1" id="bac" style="background-color: #130B14">
     <div class="container_12"> 
 
-      <div class="grid_7" >
-
-        <h2 style="color: #5fa022;" >Բարի գալուստ Sushi Club</h2>
-        <div class="page1_block col1"> <img src="images/set.jpg" style="border-radius: 50%" alt="">
-          <div class="extra_wrapper">
-            <p style="color: white"><span class="col2"><a href="#"></a></span>Սիրված և պահանջված սեթերը կարող եք շարունակել վայելել 40-50% զեղչով </p>
-            <span style="color: white">Աշխատանքի ընթացքում ընդմիջումներն անհրաժեշտ են բոլորիս: Ընդմիջումներից ամենահաճելին լանչն է, որն օգնում է վերականգնել ուժերը և բարձրացնել տրամադրությունը</span> <br>
-            <a href="#" class="btn" style="background-color: #5fa022;">տեսնել մենյուն</a> </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-      <div class="grid_5">
-        <h2 style="color: #5fa022;">Կոնտակտներ</h2>
-        <ul class="list">
-          <li style="color: white">098֊21֊21֊14</li>
-          <li style="color: white">043֊21֊21֊15</li>
-          <li style="color: white">21sushiclub@mail.ru</li>
-          <li style="color: white">Առաքումը անվճար</a></li>
-          <!-- <li style="color: white">7․000 դրամ և ավել պատվերի դեպքում առաքումը անվճար</li> -->
-          <!-- <li><a href="#">Assist with wedding scheme and design</a></li> -->
-        </ul>
-      </div>
       <div class="clear"></div>
       <div class="grid_12">
         <div class="hor_separator"></div>
@@ -304,6 +332,30 @@ footer {
               </div>
             </li>
           </ul>
+
+        </div>
+        
+      <div class="grid_7" >
+
+          <h2 style="color: #5fa022;" >Բարի գալուստ Sushi Club</h2>
+          <div class="page1_block col1"> <img src="images/set.jpg" style="border-radius: 50%" alt="">
+            <div class="extra_wrapper">
+              <p style="color: white"><span class="col2"><a href="#"></a></span>Սիրված և պահանջված սեթերը կարող եք շարունակել վայելել 40-50% զեղչով </p>
+              <span style="color: white">Աշխատանքի ընթացքում ընդմիջումներն անհրաժեշտ են բոլորիս: Ընդմիջումներից ամենահաճելին լանչն է, որն օգնում է վերականգնել ուժերը և բարձրացնել տրամադրությունը</span> <br>
+              <a href="#" class="btn" style="background-color: #5fa022;">տեսնել մենյուն</a> </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="grid_5">
+          <h2 style="color: #5fa022;">Կոնտակտներ</h2>
+          <ul class="list">
+            <li style="color: white">098֊21֊21֊14</li>
+            <li style="color: white">043֊21֊21֊15</li>
+            <li style="color: white">21sushiclub@mail.ru</li>
+            <li style="color: white">Առաքումը անվճար</a></li>
+            <!-- <li style="color: white">7․000 դրամ և ավել պատվերի դեպքում առաքումը անվճար</li> -->
+            <!-- <li><a href="#">Assist with wedding scheme and design</a></li> -->
+          </ul>
         </div>
       </div>
       <div class="clear"></div>
@@ -337,7 +389,9 @@ footer {
         </div>
       </div>
       <div class="clear"></div>
+      
     </div>
+    
   </div>
 </div>
 <footer>
