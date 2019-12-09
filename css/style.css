@@ -370,9 +370,6 @@ header h1 a img {
 	margin-bottom: 25px;
 }
 
-.socials {
-	overflow: hidden;
-}
 
 .bottom_block nav {
 	padding-top: 27px;
@@ -403,31 +400,6 @@ header h1 a img {
 	color: #699440;
 }
 
-
-.socials a {
-	background: url(../images/socials.png) 0 0 no-repeat;
-	width: 26px;
-	float: left;
-	display: block;
-	height: 27px;
-	margin-left: 11px;
-}
-
-.socials a:hover {
-	opacity: 0.5;
-}
-
-.socials a:first-child {
-	margin-left: 0;
-}
-
-.socials a:first-child+a {
-	background: url(../images/socials.png) -38px 0 no-repeat;
-}
-
-.socials a:first-child+a+a {
-	background: url(../images/socials.png) right 0 no-repeat;
-}
 
 
 .carousel2 li img {
