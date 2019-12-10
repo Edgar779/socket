@@ -4,10 +4,82 @@
 <head>
   <title><img src="images/sushiclub.jpg" alt=""></title>
   <style>
+
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+.smoky {
+  display: inline-block;
+  text-shadow: 0 0 0 whitesmoke;
+  animation: smoky 5s 3s both;
+}
+
+.smoky:nth-child(even){
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform:
+      translate3d(15rem,-8rem,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke; }
+  to {
+    transform:
+      translate3d(18rem,-8rem,0)
+      rotate(-40deg) 
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+
   .menuImg{
     height: 130px;
   }
+  
+  #bodyback{
+  background-image: url('images/downloadtextureblackstonewalltexturebackgrounddownloaddesignstonetexture580_yapfiles.ru.jpg');
+
+}
+
+#bac{
+  background-image: url('images/downloadtextureblackstonewalltexturebackgrounddownloaddesignstonetexture580_yapfiles.ru.jpg');
+
+}
   </style>
+  <script>
+      setInterval(() => {
+      smokyin();
+    }, 7000);
+    function smokyin(){
+      const smoky = document.getElementById('smokyparent');
+      smoky.innerHTML = '<span class="smoky">2</span><span class="smoky">1</span><span>&nbsp;</span><span class="smoky">S</span><span class="smoky">u</span><span class="smoky">sh</span><span class="smoky">i</span><span>&nbsp;</span><span class="smoky">C</span><span class="smoky">l</span><span class="smoky">u</span><span class="smoky">b</span>';
+    //  smokyout();
+    }
+    function smokyout(){
+      const smoky = document.getElementById('smokyparent');
+    
+      setInterval(() => {
+      }, 3000);
+    }
+    </script>
   <meta charset="utf-8">
   <link rel="icon" href="images/favicon.ico">
   <link rel="shortcut icon" href="images/favicon.ico">
@@ -26,40 +98,82 @@
   <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
   <script src="js/tms-0.4.1.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <link rel="stylesheet" media="screen" href="css/ie.css">
 <![endif]-->
 </head>
 
-<body style="background-color: #5fa022;">
-  <header style="background-color: #130B14">
-    <div class="container_12">
-      <div class="grid_12">
-        <h1><a href="index.html"><img style="z-index: 1; width: 27%; border-radius: 50%; position: absolute;"
-              src="images/sushiclub.jpg" alt=""></a></h1>
-
-        <div class="menu_block">
-          <nav>
-            <ul class="sf-menu">
-              <li><a href="index.html" style="color: #4DE304; background-color: #130B14;">Home</a></li>
-              <li><a href="about-us.html" style="color: #4DE304; background-color: #130B14;">Basket</a>
-
-              </li>
-              <li><a href="menu.html" style="color: #4DE304; background-color: #130B14;">Menu</a></li>
-              <li><a  style="color: #4DE304; background-color: #130B14;"></a></li>
-              <li><a  style="color: #4DE304; background-color: #130B14;"></a></li>
-              <li class="current"><a href="contacts.html"
-                  style="color: #4DE304; background-color: #130B14;"></a></li>
-            </ul>
-          </nav>
-          <div class="clear"></div>
+<body style="background-color: #5fa022;" id="bodyback">
+    <header  style="background-color: #130B14" id="headcar">
+        <div class="container_12">
+          <div class="grid_12">
+              <div class="navbar-header" style="margin-top: 30px; height: 50px;">
+                  <a class="navbar-brand" href="#" style="color: white;"><h4 id="smokyparent" style="font-size: 30px; margin-top: -10px;"><span class="smoky">2</span><span class="smoky">1</span><span>&nbsp;</span><span class="smoky">S</span><span class="smoky">u</span><span class="smoky">sh</span><span class="smoky">i</span><span>&nbsp;</span><span class="smoky">C</span><span class="smoky">l</span><span class="smoky">u</span><span class="smoky">b</span></h4></a>
+                </div>  
+            <!-- <p id="logosushi">sdsds</p> -->
+            <!-- <h1 id="logosushi">21 Sushi Club</h1> -->
+            <!-- <h1><a href="index.html"><img style="z-index: 1; width: 27%; border-radius: 50%; position: absolute;" src="images/sushiclub.jpg" alt=""></a></h1> -->
+            <div class="menu_block">
+              <!-- <nav>
+                <ul class="sf-menu">
+                  <li class="current"><a href="index.html" style="color: #4DE304; background-color: #130B14;">Home</a></li>
+                  <li><a href="about-us.html" style="color: #4DE304; background-color: #130B14;">Basket</a>
+                    
+                  </li>
+                  <li class="with_ul"><a href="menu.html" style="color: #4DE304; background-color: #130B14;">Menu</a>
+                    <ul>
+                        <li><a href="#"> cuisine</a></li>
+                        <li><a href="#">Good rest</a></li>
+                        <li><a href="#">Services</a></li>
+                      </ul>
+                  </li>
+                </ul>
+              </nav> -->
+              <!-- <nav>
+                  <ul class="sf-menu">
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li class="with_ul"><a href="about-us.html">About Us</a>
+                      <ul>
+                        <li><a href="#"> cuisine</a></li>
+                        <li><a href="#">Good rest</a></li>
+                        <li><a href="#">Services</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                  </ul>
+                </nav> -->
+               
+                 <ul class="nav navbar-nav">
+                   <!-- <li><a href="" id="logosushi">21 Sushi Club</a></li> -->
+          <li class="active"><a href="index.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Home</a></li>
+          <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 23px; color: #5fa022; background-color: #130B14;">Menu <span class="caret"></span></a>
+            <ul class="dropdown-menu" style="background-color: #130B14;">
+              <li><a href="allmenu.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Ամբողջ Մենյուն</a></li>
+            <li><a href="menu.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Set</a></li>
+            <li><a href="sushi.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Sushi</a></li>
+            <li><a href="sashimi.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Sashimi</a></li>
+            <li><a href="gunkan.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Gunkan</a></li>
+            <li><a href="maki.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Maki FutoMaki</a></li>
+            <li><a href="temaki.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Temaki</a></li>
+            <li><a href="roll.html" style="color: #5fa022; background-color: #130B14; font-size: 23px;">Roll</a></li>
+          </ul>
+          </li>
+        </ul>
+              <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+          </div>
         </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-  </header>
-  <div class="content" style="background-color: #130B14;">
+      </header>
+  <div class="content" style="background-color: #130B14;" id="bac">
    
     <div class="container_12">
       <div id="contain" style="width: 100%; margin-top: 50px;">
@@ -72,20 +186,19 @@
       </div>
       <div class="clear"></div>
       <div class="bottom_block">
-        <div class="grid_6">
-          <h3 style="color: #4DE304;">Follow Us</h3>
-          <div class="socials"> <a href="https://www.facebook.com/21sushiclub/" target="_blank"></a> </div>
-          <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about-us.html">Basket</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <!-- <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="news.html">News</a></li> -->
-              <li class="current"><a href="contacts.html">Contacts</a></li>
-            </ul>
-          </nav>
-        </div>
+          <div class="grid_6">
+              <h3 style="color: #5fa022">Հետևեք մեզ</h3>
+              <a href="https://www.facebook.com/21sushiclub/" target="_blank"><i class="fa fa-facebook" style="font-size: 28px; color: chartreuse;" aria-hidden="true"></i></a>
+              <a style="margin-left: 3%;" href="https://www.instagram.com/21sushiclub/" target="_blank"><i class="fa fa-instagram" style="font-size: 28px; color: chartreuse;" aria-hidden="true"></i></a>
+    
+              <!-- <nav>
+                <ul>  
+                  <li class="current"><a href="index.html">Home</a></li>
+                  <li><a href="https://sushi-test778.herokuapp.com/set">Menu</a></li>
+                  <li><a href="https://sushi-test778.herokuapp.com/set">Basket</a></li>
+                </ul>
+              </nav> -->
+            </div>
         <div class="grid_6">
             <h3 style="color: #5fa022">Էլեկտրոնային հասցե</h3>
             <p class="col1" style="color: white">Ստացիր նորություններ, կատարիր
@@ -105,12 +218,14 @@
   </div>
  
   <footer>
-    <div class="container_12">
-      <div class="grid_12"> Sushi Club &copy; 2019 | <a href="#">Privacy Policy</a> </div>
-      <div class="clear"></div>
-    </div>
-  </footer>
-
+      <div class="container_12">
+        <img src="images/download.jpg" style="border-radius: 10px; cursor: pointer; float: right;" class="col-md-2" alt="">
+        <img src="images/fb-share.png" style="border-radius: 10px; cursor: pointer; float: right;" class="col-md-2" alt="">
+    
+        <div class="grid_12"> Sushi Club &copy; 2019 | <a href="#">Privacy Policy</a> </div>
+        <div class="clear"></div>
+      </div>
+    </footer>
 
   <script>
     fetch("https://sushi-test778.herokuapp.com/getushimenu").then(response => response.json())

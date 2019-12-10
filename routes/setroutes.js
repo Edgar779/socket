@@ -5,7 +5,7 @@ const Sashimi = require('../models/Sashimi');
 const Gunkan = require('../models/Gunkan');
 const Maki = require('../models/Maki');
 const Temaki = require('../models/Temaki');
-
+const Image = require('../models/Image');
 const path = require('path');
 export const addSet = async (req, res, next) => {
     // console.log(req.file);
@@ -156,7 +156,27 @@ export const addTemaki = async (req, res, next) => {
         throw e
     }
 }
-
+export const addImage = async (req, res, next) => {
+    console.log(req.file);
+    try {
+        let set = {
+            img: req.file.filename,
+         name: req.file.originalname
+        }
+        let setMenu = new Image(set); // this is modal object.
+        setMenu.save()
+            .then((data) => {
+                console.log(data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            res.json("nkar@ hajoxutyamb avelacvel e")
+    }
+    catch (e) {
+        throw e
+    }
+}
 export const addSushi = async (req, res, next) => {
     // console.log(req.file);
     try {
@@ -310,6 +330,24 @@ export const getSashimiMenu = async (req, res, next) => {
         throw e
     }
 }
+
+export const getbackgrimage = async (req, res, next) => {
+    try {
+        Image.find({})
+            .then((data) => {
+                res.send(data);
+                res.end();
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+    catch (e) {
+        throw e
+    }
+}
+
+
 
 
 

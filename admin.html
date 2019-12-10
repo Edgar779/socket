@@ -288,9 +288,59 @@
                           </form>
                     </div>
 
+
+
+                    <div class="container">
+                      <h2>Add Background Image</h2>
+                      <p>Image</p>
+                      <form action="https://sushi-test778.herokuapp.com/addbackimage" enctype="multipart/form-data" method="POST">
+                       
+                                <input type="file" name="category">
+  
+                          <input type="submit" class="form-control" id="send">
+                        
+                      </form>
+                    </div>
+
+                    <div class="container">
+                        <form>
+                                <h2>Delete Background</h2>
+                            <div class="form-group">
+                                <label for="delete"></label>
+                                    <input type="text" name="deleteimage" class="form-control" id="deleteimage">
+                            </div>
+                            <input type="button" value="Delete" class="form-control" onclick="deleteimageButton(this)" id="deletesashimibutton">
+                            <h2 id="removedimage"></h2>
+                        </form>
+                  </div>
+
       
     </body>
     <script>
+      function deleteimageButton(e){
+        const deleteFood = document.getElementById('deleteimage').value;
+              const newobj = {
+                  name: deleteFood
+              }
+            fetch("https://sushi-test778.herokuapp.com/deleteImage", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newobj)
+  }).then(response => response.json())
+  .then((res)=>{
+    const removed = document.getElementById('removedimage');
+        removed.style = 'color: red';
+        removed.innerHTML = res.text;
+        setTimeout(() => {
+            location.reload();
+
+        }, 2000);
+
+  })
+      }
         function deleteButton(e){
               const deleteFood = document.getElementById('delete').value;
               const newobj = {

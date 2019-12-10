@@ -14,6 +14,7 @@ const Maki = require('./models/Maki');
 const Roll = require('./models/Roll');
 const Temaki = require('./models/Temaki');
 const Sashimi = require('./models/Sashimi');
+const Image = require('./models/Image');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' }); // multer configuration
 const sharp = require('sharp'); 
@@ -90,6 +91,8 @@ app.post('/addsashimi', upload.single('category'), validation.addSet, set.addSas
 app.post('/addgunkan', upload.single('category'), validation.addSet, set.addGunkan)
 app.post('/addmaki', upload.single('category'), validation.addSet, set.addMaki)
 app.post('/addtemaki', upload.single('category'), validation.addSet, set.addTemaki)
+app.post('/addbackimage', upload.single('category'), validation.addImage, set.addImage)
+
 
 app.post('/addsushi', upload.single('category'), validation.addSet, set.addSushi)
 
@@ -111,6 +114,15 @@ app.post('/deleteFoodSushi', async (req,res)=>{
     const deleteFood = await Sushi.findOneAndDelete({name: req.body.name});
     if(deleteFood === null){
         res.send({success: false, text: "Nman uteliq chka"});
+    }
+    else{    
+    res.send({success: true, text: "Hajoxutyamb jnjvel e"})
+    }
+});
+app.post('/deleteImage', async (req,res)=>{
+    const deleteFood = await Image.findOneAndDelete({name: req.body.name});
+    if(deleteFood === null){
+        res.send({success: false, text: "Nman nkar chka"});
     }
     else{    
     res.send({success: true, text: "Hajoxutyamb jnjvel e"})
@@ -172,6 +184,7 @@ app.get('/getsettemaki', set.getSetTemaki);
 
 app.get('/getushimenu', set.getSushiMenu);
 app.get('/getsashimimenu', set.getSashimiMenu);
+app.get('/getbackgrimage', set.getbackgrimage);
 app.post('/getBasket', set.getBasket);
 app.post('/getsushibasket', set.getSushiBasket);
 
